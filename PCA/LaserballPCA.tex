@@ -30,7 +30,7 @@
 \begin{tabular}{||l|l|l||}
 \hline\hline
 & \multicolumn{2}{p{8cm}||}{\bf SNO+ Laser Procedures} \\
-\includegraphics[width=6cm]{snolablogo.pdf} & \multicolumn{2}{p{8cm}||}{} \\
+\includegraphics[width=6cm]{../snolablogo.pdf} & \multicolumn{2}{p{8cm}||}{} \\
 \hline
 \multicolumn{2}{||p{8.5cm}|}{Document Number:} & Revision Number: 00\\
 \hline
@@ -49,13 +49,19 @@ Name: & Signature & Date \\
 
 \section{Purpose}
 
-The calibration of the SNO+ PMTs requires a standardized light source. This is provided by a dye laser coupled to the laserball which may be deployed into the detector AV. 
-
-\section{Definitions}
+The calibration of the SNO+ PMTs requires a standardized light source. The standardized light is provided by a dye laser coupled to the laserball which may be deployed into the detector AV. 
 
 \section{Supporting Procedures}
 
-\section{Commands}
+This procedure may be supplemented by documents available from the SNO calibration home page
+\url{http://www.sno.phy.queensu.ca/private/calibration/index.html}.
+These procedures will be reviewed as necessary.\\
+
+{\bf Online Manipulator Documentation} Contains online manula for all commands and operations with the manip program running on the calibration computer. This is the reference source for commands done from the manip console.\\
+
+{\bf Manipulator User Manual} Contains an overview of the manipulator system and descriptions of sources and some procedures. In particular it desccribes how to start the manmon program for controlling and monitoring the manipulator.\\
+
+{\bf Manipulator Reference Manual} contains technical information on the manipulator.\\ \\ \\ \\ \\ 
 
 \section{Outline}
 
@@ -111,7 +117,9 @@ The procedures in this section are intended to be followed sequentially for the 
 \begin{center}
 \begin{tabular}{|p{6cm}|}
 \hline
+\\
 \TextField[name=tN2t,backgroundcolor=0.975 0.975 0.975,width=2cm]{Note Time:}\\
+\\
 \hline
 \end{tabular}
 \end{center}
@@ -198,7 +206,9 @@ Gas must flow through the laser for $\approx 10$ min before turning the laser hi
 \begin{center}
 \begin{tabular}{|c|}
 \hline
+\\
 \TextField[name=CGO2,backgroundcolor=0.975 0.975 0.975,width=2cm]{Cover Gas O$_{2}$ Reading:}\\
+\\
 \hline
 \end{tabular}
 \end{center}
@@ -399,9 +409,9 @@ console & \verb+ manip > laserball to 0 0 1550+ \\
 {\bf NOTE:\\
 MINIMUM SAFE HEIGHT TO CLOSE GATEVALVE IS 1535~cm\\
 If unable to get above this height, contact expert.}
-\item \CheckBox[name=sna4] Retrieve the gatevalve key from the DCR lock box.
-\item \CheckBox[name=sna5] Unlock the gatevalve.
-\item \CheckBox[name=sna6] Carefully close the gate valve by rotating the handle {\it clockwise}. {\it Expect resistance when the handle is about 3.4 of the way to the closed position. This is the normal overcentering of the valve mechanism.} {\bf If resistance is felt before this or if any sounds are heard that might be caused by valve hitting the source, STOP and contact and expert.} Record the time the valve is closed.
+\item \CheckBox[name=sna4]{} Retrieve the gatevalve key from the DCR lock box.
+\item \CheckBox[name=sna5]{} Unlock the gatevalve.
+\item \CheckBox[name=sna6]{} Carefully close the gate valve by rotating the handle {\it clockwise}. {\it Expect resistance when the handle is about 3.4 of the way to the closed position. This is the normal overcentering of the valve mechanism.} {\bf If resistance is felt before this or if any sounds are heard that might be caused by valve hitting the source, STOP and contact and expert.} Record the time the valve is closed.
 \begin{center}
 \begin{tabular}{|c|}
 \hline
