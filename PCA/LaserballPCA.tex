@@ -14,13 +14,13 @@
 \pagestyle{fancy}
 \fancyhf{}
 % \lhead{\begin{tabular}{|p{8.25cm}} \hline {\large \bf SNO+ Laser Procedures} \\ \\ \\ \\ \end{tabular}}
-\lhead{\begin{tabular}{|p{8.25cm}|p{6cm}|}  \hline {\large \bf SNO+ Laser Ball PCA Procedures}  
-								& Document No:  \\ 
-						\cline{2-2} & Revision No: 01\\  
-
-						\cline{2-2} & Effective Date: 2017-06-14\\ 
-
-						\cline{2-2} & Page \thepage \end{tabular}}
+\lhead{\begin{tabular}{|p{8.25cm}|p{6cm}|}  
+	\hline 
+		{\large \bf SNO+ Laser Ball PCA Procedures}  
+										& Document No:  \\ 
+								\cline{2-2} & Revision No: 01\\  
+								\cline{2-2} & Effective Date: 2017-06-14\\ 
+								\cline{2-2} & Page \thepage \\  \end{tabular}}
 
 \usepackage{hyperref}
 
@@ -127,7 +127,7 @@ The procedures in this section are intended to be followed sequentially for the 
 \end{center}
 
 \item \CheckBox[name=rluo3]{} Turn on the pressure build valve (marked {\bf Pressure Builder} on dewar). The pressure builder valve opens a controlled leak on the dewar to maintain the 150 psi pressure head. If the valve is not opened, the gas pressure to the laser will eventually drop below the operating level.
-\item \CheckBox[name=rluo4]{} Contact the Detector Operator and get permission to enter the DCR. Make sure that the DCR activity bit is set.
+\item \CheckBox[name=rluo4]{} Contact the Detector Operator and get permission to enter the DCR. Make sure that the DCR activity bit is set and that the detector operator knows that the laser and URM are being prepared for use. 
 \item \CheckBox[name=rluo5]{} Turn on light in DCR following standard procedure. (See Detector Operator Manual).
 \item \CheckBox[name=rluo6]{If cover gas present:} Remove the flush return line on the URM. The presence of the buffer line makes it difficult to measure the O$_{2}$ from the URM.
 \item \CheckBox[name=rluo7]{If cover gas present:} Check that flush inlet line is connected to URM2. If not connect it. Open the valve on the source tube. It may be necessary to valve off other URMs to get sufficient flow.
@@ -228,9 +228,9 @@ Gas must flow through the laser for $\approx 10$ min before turning the laser hi
 \item \CheckBox[name=rluo35]{} Lock gate valve open.
 \item \CheckBox[name=rluo36]{} With flashlight perform light leak check on URM. In particular check the seal of the source tube window and around the base of the source tube. Also, check around any inspection panel which may have been removed in the recent past.
 \item \CheckBox[name=rluo37]{} Using the dimmer switch, {\bf slowly} bring up breaker 9 lights in the DCR with a person still watching the OWL monitor.
-\item \CheckBox[name=rluo38]{} In ORCA, source type is set to {\bf LASERBALL}.
+% \item \CheckBox[name=rluo38]{} In ORCA, source type is set to {\bf LASERBALL}.
 \item \CheckBox[name=rluo39]{} ORCA is in a {\bf transitional run}.
-\item \CheckBox[name=rluo40]{} Verify that {\bf manip\_logger} on the calibration computer and logging the {\bf Laserball} source.
+\item \CheckBox[name=rluo40]{} Verify that {\bf manip\_logger} on the calibration computer and logging the {\bf Laserball} source. Check that it is writing to the database by locating \url{couch.ug.snopl.us/manip/_all_docs} and verify that entries exist for \verb+N2LASER+ and \verb+LASERBALL+ corresponding to the current date.
 \item \CheckBox[name=rluo41]{} Check movement of laserball down
 \begin{center}
 \begin{tabular}{|l|l|}
