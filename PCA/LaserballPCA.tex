@@ -59,9 +59,9 @@ This procedure may be supplemented by documents available from the SNO calibrati
 \url{http://www.sno.phy.queensu.ca/private/calibration/index.html}.
 These procedures will be reviewed as necessary.\\
 
-{\bf Online Manipulator Documentation} Contains online manula for all commands and operations with the manip program running on the calibration computer. This is the reference source for commands done from the manip console.\\
+{\bf Online Manipulator Documentation} Contains online manual for all commands and operations with the manip program running on the calibration computer. This is the reference source for commands done from the manip console.\\
 
-{\bf Manipulator User Manual} Contains an overview of the manipulator system and descriptions of sources and some procedures. In particular it desccribes how to start the manmon program for controlling and monitoring the manipulator.\\
+{\bf Manipulator User Manual} Contains an overview of the manipulator system and descriptions of sources and some procedures. In particular it describes how to start the manmon program for controlling and monitoring the manipulator.\\
 
 {\bf Manipulator Reference Manual} contains technical information on the manipulator.\\ \\ \\ \\ \\ 
 
@@ -135,25 +135,37 @@ The procedures in this section are intended to be followed sequentially for the 
 \item \CheckBox[name=rluo9]{If cover gas present:} Check that the flow meter (located at South-East corner of pipe box) is railed. If not, open needle valve near the flowmeter fully. {\bf Flush should continue until O$_{2}$ reading at the rear of the URM is less than 0.8\%.} This may take up to an hour depending on when the URM was last flushed.
 \item \CheckBox[name=rluo10]{} Check that the source clamps are in the OUT position. {\bf Both} knobs have to be in the extreme {\bf OUT} position. {\bf WARNING: If the source is moved with the clamps in the IN position, the source, umbilical, and manipulator may be severely damaged!} The clamps are used to secure the source while the URM is being moved on and off the glovebox.
 \item \CheckBox[name=rluo11]{} Check the pressure on the air cylinder for the umbilical takeup mechanism. It should be between 45 and 55 psig. {\bf Do not operate the URM if the pressure is below 40 psig.} If the pressure falls below 10 psig at any point (even momentarily) call the \TextField[name=ocecall,backgroundcolor=0.975 0.975 0.975,width=2cm]{OCE}.
-\item \CheckBox[name=rluo12]{} Verify that the 10" gate valve is locked in the closed position. The valve is closed when the handle points towards the pipebox and the slot on the handle stem points AWAY from the source tube.
-\item \CheckBox[name=rluo13]{} Calibrate the central rope length (see procedure: Central Rope Position Calibration). Record changes in length of central rop and umbilical. The current fiducial mark for URM2 on the 10" gate valve is $z_{mark} = 1559.9$. Note the fiducial mark is written on the source tube. 
+\item \CheckBox[name=rluo12]{} Verify that the 10" gate valve is locked in the closed position. The valve is closed when the handle points towards the pipe box and the slot on the handle stem points AWAY from the source tube.
+\item \CheckBox[name=rluo13]{} Calibrate the central rope length (see procedure: Central Rope Position Calibration). Record changes in length of central rope and umbilical. 
+\begin{center}
+\begin{tabular}{|lp{4cm}|}
+\hline
+ & \\
+$\Delta l$ rope & \TextField[name=dlr,backgroundcolor=0.975 0.975 0.975,width=4cm]{}\\
+& \\
+$\Delta l$ umbilical & \TextField[name=dlu,backgroundcolor=0.975 0.975 0.975,width=4cm]{}\\
+& \\
+\hline
+\end{tabular}
+\end{center}
+The current fiducial mark for URM2 on the 10" gate valve is $z_{mark} = 1549.3$. Note the fiducial mark is written on the source tube. 
 \item \CheckBox[name=rluo14]{} Check that all seals are in place on URM. Including:
 	\begin{itemize}
 	\item \CheckBox[name=urms1]{} flush inlet line
 	\item \CheckBox[name=urms2]{} window on front of URM motorbox
 	\item \CheckBox[name=urms3]{} window on rear of URM motorbox
-	\item \CheckBox[name=urms4]{} umbilical feedthrouhg on rear of motorbox
+	\item \CheckBox[name=urms4]{} umbilical feedthrough on rear of motorbox
 	\item \CheckBox[name=urms5]{} view port window cover on source tube
-	\item \CheckBox[name=urms6]{} window on rear of strecher box
+	\item \CheckBox[name=urms6]{} window on rear of stretcher box
 	\end{itemize}
 \item \CheckBox[name=rluo15]{} Check that you are familiar with the section on operating the laser especially the {\bf Emergency Shutdown Procedure}. Also, be aware that UV absorbing safety glasses {\bf MUST} be worn while the laser is running unless {\bf ALL} covers on the laser are in place.
 \item \CheckBox[name=rluo16]{} Plug in the powercord to the laser.
-\item \CheckBox[name=rluo17]{} Check the POWER switch on the laser is to {\bf local}.
+\item \CheckBox[name=rluo17]{} Check the POWER switch on the laser is to {\bf remote}.
 \item \CheckBox[name=rluo18]{} Check the CONTROL switch on the laser is set to {\bf remote}.
 \item \CheckBox[name=rluo19]{} Check that the manual shutoff valve on the right of MV5 is open.
 \item \CheckBox[name=rluo20]{} Check that the manual shutoff valve MV9 is open.
-% \item \CheckBox[name=rluo21]{} Reset the "Kill Switch" by pushing the red reset button.
-% \item \CheckBox[name=rluo22]{} Type \verb+n2laser poweron+ on the manip computer. This turns on the low voltage power and energizes the N$_{2}$ gas valve.
+\item \CheckBox[name=rluo21]{} Reset the "Kill Switch" by pushing the red reset button.
+\item \CheckBox[name=rluo22]{} Type \verb+n2laser poweron+ on the manip computer. This turns on the low voltage power and energizes the N$_{2}$ gas valve.
 \item \CheckBox[name=rluo23]{} Verify that N$_{2}$ is flowing through flow gauge FG5 to the laser head. If there is no flow consult an expert. {\bf Running the laser without sufficient N$_{2}$ flow causes serious damage to the laser head!}
 \item \CheckBox[name=rluo24]{} Record observed laser gas pressure and flow values. Note that the expected values listed below may be superseded by ones listed on one or more tags attached to the valves or flow meters. Always use the values found on the tags.
 \begin{center}
@@ -242,7 +254,7 @@ manmon & in laserball window: \\ &  set x=0, y=0, z=-5 \\ & click on {\bf move b
 \end{tabular}
 \end{center}
 The laserball should move down by 5 cm. The tension on the rope should be 40-60 N. The tension on the umbilical should be 10-30 N.
-\item \CheckBox[name=rluo42]{} Check that the source offset and orientation is set correctly. At the console type \verb+laserball sourceoffset+. The current laserball has an offset of -64.5 cm. If the reported number is different contact the OCE. FOr single axis deployment mode the orientation should be 0; i.e. confirm from the console by typing \verb+laserball orientation+. It should return \verb+0+. If deployed with sideropes the orientation depends on what direction the slot faces. If in doubt contact the OCE.
+\item \CheckBox[name=rluo42]{} Check that the source offset and orientation is set correctly. At the console type \verb+laserball sourceoffset+. The current laserball has an offset of -64.5 cm. If the reported number is different contact the OCE. FOr single axis deployment mode the orientation should be 0; i.e. confirm from the console by typing \verb+laserball orientation+. It should return \verb+0+. If deployed with side ropes the orientation depends on what direction the slot faces. If in doubt contact the OCE.
 \item \CheckBox[name=rluo43]{} Deploy source into the glovebox:
 \begin{center}
 \begin{tabular}{|l|l|}
@@ -268,8 +280,8 @@ manmon & in laserball window: \\ &  set x=0, y=0, z=64.5 \\ & click on {\bf move
 \end{tabular}
 \end{center}
 \subsection{Turning on the Laser}
-\item \CheckBox[name=rlup47]{} Verify on the console that the control power on the laser is on: \\ \verb+n2laser monitor+\\ All voltages should be on, all stir motors sould be ON, both filterwheels should be IDLE, the dye cell motor should be IDLE and gas should be flowing. If not contact OCE.
-\item \CheckBox[name=rlup48]{} Verify that the N2 gas has been flowing through the laser for $\approx 10$~min. Note that the gas flow is turned on and off with the n2laser poweron/poweroff commands.
+\item \CheckBox[name=rlup47]{} Verify on the console that the control power on the laser is on: \\ \verb+n2laser monitor+\\ All voltages should be on, all stir motors should be ON, both filterwheels should be IDLE, the dye cell motor should be IDLE and gas should be flowing. If not contact OCE.
+\item \CheckBox[name=rlup48]{} Verify that the N2 gas has been flowing through the laser for $\approx 10$~min. Note that the gas flow is turned on and off with the \verb+n2laser poweron/poweroff+ commands.
 \item \CheckBox[name=rlup49]{} Select desired wavelength or dye cell
 \begin{center}
 \begin{tabular}{|l|l|}
@@ -293,7 +305,7 @@ manmon & in laser window: $\to$ Windows $\to$ Neutral Density Settings\\
 \hline
 \end{tabular}
 \end{center}
-The filter wheels are set to a large attenuation when first turning on the laser to prevent a large amount of light being introduced into the detecto and overwhelming the data aquisition. Once the laser is on, the rate and intensity can be adjusted to the desired level.
+The filter wheels are set to a large attenuation when first turning on the laser to prevent a large amount of light being introduced into the detector and overwhelming the data acquisition. Once the laser is on, the rate and intensity can be adjusted to the desired level.
 \item  \CheckBox[name=rlup51]{} Wait for the laser to return status READY
 \item  \CheckBox[name=rlup52]{} Turn on the laser light
 \begin{center}
@@ -381,7 +393,7 @@ manmon & in laserball window: \\ &  in laserball window:\\ & click on {\bf Posit
 \hline
 \end{tabular}
 \end{center}
-When moving the laserball to 1380, it is important to make sure you are moving with respect to the {\bf pivot} and {\bf not} the centre of the source which is 64.5 cm below the pivot. This is especially important if the sideropes are attached!
+When moving the laserball to 1380, it is important to make sure you are moving with respect to the {\bf pivot} and {\bf not} the centre of the source which is 64.5 cm below the pivot. This is especially important if the side ropes are attached!
 
 \subsection{Retracting source above gate valve; Side ropes not attached}
 \item \CheckBox[name=sna1]{} Move laserball to 1530
