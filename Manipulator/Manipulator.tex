@@ -1,0 +1,446 @@
+\documentclass[11pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\pagestyle{fancy}
+\fancyhf{}
+% \lhead{\begin{tabular}{|p{8.25cm}} \hline {\large \bf SNO+ Laser Procedures} \\ \\ \\ \\ \end{tabular}}
+\lhead{\begin{tabular}{|p{8.25cm}|p{6cm}|}  
+	\hline 
+		{\large \bf SNO+ Manipulator Operation Procedures}  
+										& Document No:  \\ 
+								\cline{2-2} & Revision No: 01\\  
+								\cline{2-2} & Effective Date: 2017-07-04\\ 
+								\cline{2-2} & Page \thepage \\  \end{tabular}}
+
+\usepackage{hyperref}
+
+\usepackage{geometry}
+% \geometry{top=2in}
+
+\begin{document}
+
+\begin{tabular}{||l|l|l||}
+\hline\hline
+& \multicolumn{2}{p{8cm}||}{\bf SNO+ Manipulator Operation Procedures} \\
+\includegraphics[width=6cm]{../snolablogo.pdf} & \multicolumn{2}{p{8cm}||}{} \\
+\hline
+\multicolumn{2}{||p{8.5cm}|}{Document Number:} & Revision Number: 01\\
+\hline
+\multicolumn{3}{||l||}{Document Owner: SNO+ Calibration Post-Doc} \\
+\hline
+\multicolumn{3}{||l||}{Reviewer:}\\
+\hline
+Name: & Signature & Date \\
+\hline
+\multicolumn{3}{||l||}{Authorizer:}\\
+\hline
+Name: & Signature & Date \\
+\hline\hline
+\end{tabular}
+\thispagestyle{empty}
+
+\section{Manipulator System Shutdown}
+
+\subsection{Purpose}
+The purpose of these procedures is to shutdown the calibration manipulator electronics in an ordrely fashion. The circumstancs when this should be done are when there is a scheduled power outage to the underground lab. Except in an obvious emergency, the manipulator computer should only be shutdown with the permission of the Calibration Group and the AV group.
+
+\subsection{Outline of Procedure}
+\begin{itemize}
+\item Stop the manipulator control program.
+\item Turn off the manipulator computer.
+\item Turn off the manipulator computer monitor.
+\item Turn off the data concentrator.
+\item Turn off the watchdog timer box.
+\end{itemize}
+\subsection{Prior to Starting Procedure}
+\begin{itemize}
+\item Obtain permission to shutdown the manipulator computer from the Calibration Group and the AV Group.
+\item Verify that access to the DCR can be obtained.
+\end{itemize}
+
+\subsection{Procedure}
+\begin{enumerate}
+\item \CheckBox[name=p1]{} Enter the DCR. The Manipulator electronics are in "Aksel's Garage", the alvoe immediately to the right of the entry way to the DCR.
+\item \CheckBox[name=p2]{} If the monitor is off, turn it on. The manip program should be running. This can be seen by the 
+\begin{verbatim}
+manip>
+\end{verbatim}
+prompt at the bottom of the screen.
+\item \CheckBox[name=p3]{} At the prompt, type the command.
+\begin{verbatim}
+quit
+\end{verbatim}
+The manip program should shutdown returning to the terminal prompt.
+\item \CheckBox[name=p4]{} Shut down the computer from the OS menu. (Check the system)
+\item \CheckBox[name=p5]{} Turn off the monitor.
+% \item \CheckBox[name=p5p5]{} Turn off the data concentrator (This is replaced by a USB switch)
+\item \CheckBox[name=p6]{} Turn off the watchdog timer box. (The location needs to be verified)
+\end{enumerate}
+\section{Manipulator System Startup}
+
+The purpose of this procedure is to start the manipulator control computer after it has been turned off. This procedure should only be done with the permission of the Calibration Group.
+
+\subsection{Outline of Procedure}
+\begin{itemize}
+\item Turn on the manipulator computer monitor.
+\item Turn on the data concentrator.
+\item Turn on the watchdog timer.
+\item Turn on the computer.
+\item Verify that the manip program has started correctly.
+\item Verify that the CMA system has connected to the manipulator computer.
+\end{itemize}
+
+\subsection{Prior to Starting Procedure}
+\begin{itemize}
+\item Obtain permission to start the manipulator computer from the Calibration Group.
+\item Verify that access to the DCR can be obtained.
+\end{itemize}
+
+\subsection{Procedure}
+\begin{enumerate}
+\item \CheckBox[name=ms1]{} Enter the DCR. The Manipulator electronics are in "Aksel's Garage", the alcove immediately to the right of the entry way to the DCR.
+\item \CheckBox[name=ms2]{} If the monitor is off, turn it on.
+% \item \CheckBox[name=ms3]{} Turn on the Data Concentrator box
+\item \CheckBox[name=ms4]{} Turn on the Watchdog Timer Box. (Location/Update needed)
+\item \CheckBox[name=ms5]{} Get ready to turn on the Manipulator Computer. This computer is located on the desk in the garage. Ensure that the USB switch is connected to the computer via the USB port on the back of the computer. The power switch is on the front. This is a CentOS computer and it will go through the typical Linux startup checklist when turned on prior to reaching the login screen. Get the password for the "calibration" user from the Calibration Group Leader.
+\item \CheckBox[name=ms6]{} Open a terminal window and type \verb+cd manip+ at the command line prompt. Once running the screen should display the manipulator status and have a \verb+manip>+ prompt at the bottom.
+% \item \CheckBox[name=ms7]{} 
+\end{enumerate}
+% \section{Remote Reboot of the Calibration Manipulator Computer} Need to write for linux system and need to ensure that the system forces the selection of a known IP address.
+\section{URM Light Leak Check}\label{sec:ullc}
+
+  After a URM has been opened up (cover plate taken off or removed
+from the  glovebox), it is necessary to do a check for light  leaks.
+This is done using the OWL tubes and Neck tubes on the detector
+itself.  This monitor consists of doing singles rate reads of the
+top OWL tubes that look up towards the deck and the DCR and 
+glovebox.  
+
+
+\begin{enumerate}
+\item \CheckBox[name=ulc1]{} Contact detector operator, verify that either the detector
+  is in a maintenance run or has the UC bit set.
+\item \CheckBox[name=ulc2]{} Turn on Owl Tubes (Crate 16 HV B)
+\item \CheckBox[name=ulc3]{} Turn off DCR lights.
+\item \CheckBox[name=ulc4]{} Poll CMOS rates on crates 3/13/18. Watch rates on tubes 
+\begin{itemize}
+\item 3/15/20,23,25,26,27,28,29,30,31
+\item 13/15/0,1,2,3,22,23,24,25,26,27,28,29,30,31
+\item 18/15/21,22,23,24,25,26,27,28,29,30,31
+\end{itemize}
+\item \CheckBox[name=ulc5]{} While Watching the Owl Tube Light Monitor:
+  \begin{enumerate}
+  \item Open the gate valve for the URM being lightleak checked.
+  \item Shine flashlight around the gate valve, 
+         and then around all seals on URM
+  \end{enumerate}
+  %----------------------
+  \small
+  {\em
+    Note that the light monitor only updates once a second.  The
+    flashlight must be moved at an appropriate speed.
+  }
+  \normalsize
+  %----------------------
+\end{enumerate}
+
+\section{URM Central Rope Length Calibration}
+
+The length calibration of the central rope for each URM is determined by sighting the pivot of the manipulator carriage agains a fiducial line scribed on the window of the source tube viewing port. The height of the fiducial mark is also indicated on the side of each source tube. If the number on the source tube diffes from the one listed above use the number written on the tube.
+
+\subsection{Prior to Procedure:}
+\begin{enumerate}
+\item Source is above the gate valve.
+\item Gate valve is {\bf closed}.
+\item Gate valve is locked or handle is removed.
+\end{enumerate}
+\subsection{Procedure}
+\begin{enumerate}
+\item \CheckBox[name=ucl1]{} Verify gatevalve on glovebox below source tube is locked in the {\bf CLOSED} position.
+\item \CheckBox[name=ucl2]{} Open view port on the source tube. This requires a 7/16" wrench.
+\item \CheckBox[name=ucl3]{} Operate manipulator until the centre of the manipulator carriage is at the horizontal line marked on window. {\it Note: the example below assumes the n16 source. For the laserball or a different source replace the object name \verb+n16+ below as appropriate.}\\
+From the Manip console: 
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > n16 by <dx> <dy> <dz>+\\
+\hline
+\end{tabular}
+\end{center}
+for example: 
+\begin{center}
+\begin{verbatim}
+n16 by 0 0 2
+\end{verbatim}
+\end{center}
+moves the n16 2cm up and 
+\begin{center}
+\begin{verbatim}
+n16 by 0 0 -0.5
+\end{verbatim}
+\end{center}
+moves the n16 0.5 cm down.
+\item \CheckBox[name=ucl4]{} Set the calibration in the manip program
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > n16 locate 0 0 1558.5+ \\
+\hline
+\end{tabular}
+\end{center}
+the position 1558.5 is the location of the calibration mark on the view port window. It was determined by measuring the height of the source tube and the location of the AV below deck.
+\item \CheckBox[name=ucl5]{} Reseal the view port window.
+\item \CheckBox[name=ucl6]{} When appropriate (after the URM has been flushed) perform a light leak check (see procedure \ref{sec:ullc}).
+\end{enumerate}
+
+\section{Calibrating East/West Side Ropes}
+
+Before each use, the side ropes require both a tension calibration and a length calibration.
+
+\subsection{Calibrating Side Rope Tension Offsets}
+The load cells that measure rope tension are prone to have their offsets drift. Although the slope of the load cell calibration does not change, the apparent zero tension point drifts. This is potentially very bad since when operating the manipulator with side ropes on, it is necessary to go down to low tension (low is on the order of 5N or less).
+{\bf If the ropes are operated at zero tension they will unspool from the takeup reels in the motor units resulting in tangling and requireing major intervention.}
+Therefore this procedure to reset the zeros on the load cells is important. Unfortunately it involves taking all the tension off the rope units and thus risks the same problem it is trying to prevent.
+{\bf Extreme care must be taken when performing this procedure}.
+
+\subsection{Calibrating the (East) Side Rope Tension Offset}
+In the following we outline the steps needed to calibrate the East Rope. The calibration of the other ropes is identical except for the obvious change of the object name. Note that the offset on the southrope is weird and that one may have to "lie" to it to get the proper offset (is this still true?) Contact the OCE if you're trying to calibrate the South Rope and do not understand what to do.
+\begin{enumerate}
+\item \CheckBox[name=cesr1]{} Obtain permission from OCE to (re-)calibrate the sideropes
+\item \CheckBox[name=cesr2]{} Go to expert mode at the manipulator console
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > expert room601 +\\
+\hline
+\end{tabular}
+\end{center}
+{\it Note: Expert mode has a 30 minute time out. If you take longer than this it will be necessary to reenter expert mode.}
+\item \CheckBox[name=cesr3]{} Drive out 30 to 40 cm of rope under constant tension.
+\begin{itemize}
+\item Have one person apply tension to the rope in question while another sets the rope in constant tension mode. For example:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+ manip > eastrope tension 15 +\\
+\hline
+\end{tabular}
+\end{center}
+{\it In tension mode the motor will attempt to keep the rope under constant tension. However, motors have a maximum speed of 4 cm per second so whatever you do {\bf do is slowly!} Note that a STOP command (or really low tenstion) causes \verb+manip+ to exit tension mode}
+\item The person at the glovebox can now pull out the desired amount of rope. {\bf Do it slowly!}
+\end{itemize}
+{\it If the rope is not completely slack repeat the above steps}.
+\item \CheckBox[name=cesr4]{} Check what the tension is by doing a 
+\begin{center}
+\begin{tabular}{|c|c|}
+console & \verb+ manip > eastrope monitor+ \\
+\end{tabular}
+\end{center}
+If the tension is within 0.2 N of zero there is no need to do the next two steps
+\item \CheckBox[name=cesr5]{} CAlirbation the loadcell offset. {\bf Mak sure the rope really has zero tension!} {\it Note the \verb+calibrate+ command is a "toggle" command.}
+	\begin{tabular}{|c|c|}
+	\hline
+	console & \verb+manip > eastrope calibrate+ \\
+	              & \verb+manip > eastrope point 0 N+ \\
+	              & \verb+manip > eastrope calibrate+ \\
+	           \hline
+	\end{tabular}
+{\it It is important that only one calibration point is used while the rope is in \verb+calibrate+ mode. Two or more points will change the slope of the calibtaion as well. Thus if you happend to mistype the \verb+point 0 N+, do {\bf not} under any circumstances just retype the \verb+point+ command! Instead, compete the calibration (i.e. exit \verb+calibration+ mode and re-do all three steps.}
+\item \CheckBox[name=cesr6]{} Check that the rope tension now reads 0 by using the monitor command,
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > eastrope monitor+ \\
+\hline
+\end{tabular}
+and reading the rope tension.
+\item \CheckBox[name=cesr7]{} Wind the rope back in under constant tension.
+\begin{itemize}
+\item The person at the glovebox applies tension to the rope.
+\item Set the rope in constant tension mode.
+\begin{tabular}{|c|c|}
+console & \verb+manip > eastrope tension 15 \\
+\end{tabular}
+\item the persion holding the rope may now {\bf gently} let the motor take in the excess rope. {\bf Remember: slow movements only!}
+\item Once the excess rope has been taken up the person at the console types STOP (or hits the ESC key).
+\end{itemize}
+\end{enumerate}
+\subsubsection{Calibrating the Side Rope Tension Offset}
+The procedure for the west rope is identical to that for the east rope.
+
+\subsubsection{Calibrating the Side Rope Lengths}
+Now that the side rope tension offsets have been calibration it is necessary to calibrate the rope lengths. This is done by calculating the rope length based on the positions of the rope attachment points. Before the actual calibration of the length is done, the side ropes are pulled tight to high tension and then relaxed. This is to prestretch the ropes.
+\begin{enumerate}
+\item \CheckBox[name=csrl1]{} Go to the expert mode at the manipulator console
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > expert room601+\\
+\hline
+\end{tabular}
+\item \CheckBox[name=csrl2]{} Run the siderop calibration command file from the {\bf manip} console
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > calew+\\
+\hline
+\end{tabular}
+{\it The command calew is actually a comand file that executes a series of commands. First the ropes are wound to 90 N tenstion and held there for 30 seconds. Then the ropes are relaxed to 10 N and then the rope lengths are set.}
+\item \CheckBox[name=csrl3] At the end of the calibration process, the change in the rope lengths are reported. If either of the changes in rope lengths are greater than 0.5~cm, repeat the calibration process. Recore the change in the rope length in the calibration logbook.
+\end{enumerate}
+
+\subsection{Attaching the East/West Side Ropes}
+
+Connecting or disconnecting the side ropes to the source is the most delicate part of the calibration procedure. A mistake in the procedure could easily destroy the laserball and drop fragments of it into the detector. {\bf This procedure should only be done under the supervision of an experienced operator. Before embarking ensure that everybody involved is aware of what is about to happen.}
+
+{\it Note: This procedure assumes that you are connecting the sideropes to the laserball. If a different source, such as the \verb+N16+ source, is being used, replace \verb+laserball+ with the appropriate source name in the following procedure.}
+
+\subsubsection{Prior to the Procedure}
+The source has been deployed into the glovebox from the source tube with the pivot located at approximately $z_{pivot} = 1380$.
+
+The N16 source is further away from the centre of the glovebox than the laserball. Some people find it easier to attach the side ropes to this source if it is at a slightly lower pivot position like 1370. Also, for the N16 source, the primary operator sits at the west gloveports.
+
+If, at some point in the procedure, you find that any of the operators cannot reach the side ropes or are unable to safely pass the ropes, undo all the steps completed in reverse order, and contact the OCE before regrouping and trying again. 
+\begin{enumarate}
+\item \CheckBox[name=aesr1]{} Go to the expert mode at the manipulator console
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > expert room601+\\
+\hline
+\end{tabular}
+\end{center}
+{\it Note: Expert mode has a 30 minute time out. If you take longer than this it will be necessary to reenter expert mode.}
+\item \CheckBox[name=aesr2]{} Open the glove ports on the glovebox.
+\item \CheckBox[name=aesr3]{} Operator at {\bf manip} console puts the side ropes in constant tension mode,
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > moveew+\\
+\hline
+\end{tabular}
+\end{center}
+{\it The command \verb+moveew+ is a command file that puts the east and west side ropes into a constant tension mode. This mode causes the manipulator to try and maintain a constant (12~N) on each rope. If an operator pulls on the rope and increases the tension the manipulator plays out more rope to decrease the tension back to 12 N. This allows the operator to pull the ropes about and have the manipulator "follow". Note that the ropes cannot move faster than 3 cm per second. Therefore, whenever you move the ropes {\bf do it slowly!}}
+\item \CheckBox[name=aesr4]{} The primary operator at the south glove ports must reach in and grasp the source at the lower part of the carriage. The rope slot on the source carriage should face south unless the OCE has given different instructions. Make sure your hand is low enough that the pulleys will pivot. {\it During this procedure the source will be pulled away from its normal verticle position under the gatevalve. This means that the source will swing if the operator lets go of it causing damage to both the detector and the source. {\bf Be extremely careful.}}
+\item \CheckBox[name=aesr5]{} The operator at the west glove port must reach in and check that the side rope is in constant tension mode by pulling on it. The west rope motor unit on the rope should activate to play out more rope.
+\item \CheckBox[name=aesr6]{} The operator on the south port must hold the source with his or her right hand while the west port operator moves the west side rope to a position within easy reach of the south port operator.\\ {\it A good way to move the side ropes is to think of them as bow strings as in a bow and arrow. The way to move the rope is to hook it with a finger and slowly pull it sideways. What the operator should try avoiding is pulling down on the trop such that it goes slack down in the vessel.}
+\item \CheckBox[name=aesr7]{} The west port operator must hand the west rope to the south port operator, {\bf but does not let go of the rope until the south port operator confirms that he or she has hold of it.}\\ {\it The handover must be done in a controlled manner with tension on the siderope at all times. Make sure the other person is aware of what is about to happen. Ask and receive confirmation before proceeding with each strep of the handover}
+\item \CheckBox[name=aesr8]{} The south port operator attaches the west rope to the source. \\ {\it the easiest way to do this is to hold the rope above the carriage with a tiny amount of slack in the rope below. Gently work the slack line into the slot and slowly let the motor unit take up the slack before letting go of the rope. Make sure the rope runs correctly over the pulley.}
+\item \CheckBox[name=aesr9]{} The south port operator switches the source to his or her left hand. Make sure the source doesn't swing and make sure the west rope stays put.
+\item \CheckBox[name=aesr10]{} Either a third operator goes to the east ports or the west port operator moves over to the east ports.
+\item \CheckBox[name=aesr11]{} The east port operator checks that the east rope is in constant tension mode by gently pulling on the rope and checking that the rope motor unit plays out more rope.
+\item \CheckBox[name=aesr12]{} The east port operator moves the east rope to a position within easy reach of the south port operator.
+\item \CheckBox[name=aesr13]{} The east port operator hands the east rope to the south port operator {\bf but does not let go of the rope until the south port operator confirms that he or she has hold of it.} \\ {\it The handover must be done in a controlled manner with tension on the siderope at all times. Make sure the other person is aware of what is about to happen. Ask and receive confirmation before proceeding with each step of the handover.}
+\item \CheckBox[name=aesr14]{} The south port operator attaches the east rope to the source. \\ {\it Hold the source with your left hand on the lower part of the carriage. Make sure there is room for the pulleys to pivot. Hold the tensioned east rope with your right hand above the pulley with a tiny amount of slack below and work the slack part of the rope into the slot. Then let the east motor unit take up the slack (gently!).}
+\item \CheckBox[name=aesr15]{} The south port operator checks that the side ropes are sitting securely on their pulleys. 
+\item \CheckBox[name=aesr16]{} The south port operator finally moves the source back towards the centre of the glovebox. {\bf Do it slowly and don't let the source swing!} \\ {\it Hold the source with the palm of your hand {\bf behind} the source as you move it towards the centre of the glovebox. This way you will not pull the source too far to the other side.}
+\item \CheckBox[name=aesr17]{} Close all glove ports on glovebox.
+\item \CheckBox[name=aesr18]{} Console operator logically connects the side ropes to the laserball object in the manipulator code.
+\begin{center}
+\begin{tabular}{|c|c|}
+console & \verb+manip > laserball connect eastrope westrope+ \\
+\end{tabular}
+\end{center}
+{\it Once the (logical) connection is made the side rope in question will show up on the display. Note that the ropes can be connected one at a time if so desired.}
+\item \checkBox[name=aesr19]{} Set the source orientation (laserball only). The orientation is a number between 0 and 4. To list the possible orientation codes do a:
+\begin{center}
+\begin{tabular}{|c|c|}
+console & manip > laserball orientation+ \\
+\end{tabular}
+\end{center}
+To set the orientation to EAST do a:
+\begin{center}
+\begin{tabular}{|c|c|}
+console & manip > laserball orientation 2+ \\
+\end{tabular}
+\end{center}
+\end{enumerate}
+
+\subsection{Detaching Side Ropes}
+
+Connection or disconnecting the side ropes to the source is the most delicate part of the calibration procedure. A mistake in the procedure could easily destroy the laserball and drop fragments of it into the detector. {\bf This procedure should only be done under the supervision of an experienced operator. Before embarking ensure that everybody involved is aware of what is about to happen.}
+
+{\it  Note: This procedure assumes that the sideropes  are connected to the laserball. If a different source such as the \verb+N16+ source is being used, replace \verb+laserball+ with the appropriate source name in the following procedure}
+
+\subsubsection{Prior to the Procedure}
+ The source has been deployed into the glovebox from the source tube with the pivot located at approximately $z_{pivot}=1380$.
+
+The N16 source is further away from the centre of the glovebox than the laserball. Some people find it easier to attach the side ropes to this source if it is at a slightly lower pivot position like 1370. Also, for the N16 source, the primary operator sits at the west gloveports.
+
+If, at some point in the procedure, you find that any of the operators cannot reach the side ropes or are unable to safely pass the ropes, undo all the steps completed in reverse order, and contact the OCE before regrouping and trying again.
+\begin{enumerate}
+\item \CheckBox[name=dsr1]{} Go to the expert mode at the manipulator console
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > expert room601+\\
+\hline
+\end{tabular}
+\end{center}
+{\it Note: Exert mode has a 30 minute time out. If you take longer than this it will be necessary to reenter expert mode.}
+\item \CheckBox[name=dsr2]{} Open glove ports on the glovebox.
+\item \CheckBox[name=dsr3]{} Verify source pivot is located at approximately $z_{pivot} = 1380$.
+\item \CheckBox[name=dsr4]{} Locate primary operator at south ports, hands in gloves.
+\item \CheckBox[name=dsr5]{} Operator at \verb+manip+ console logically detaches the side ropes from the laserball object.
+\begin{center}
+\begin{tabular}{|c|c|}
+console & \verb+manip > laserball disconnects eastrope westrope+ \\
+\end{tabular}
+\end{center}
+{\it The east and west ropes should disappear from the display. The laserball at this point becomes a single axis source (but the side ropes are still physically attached).}
+\item \CheckBox[name=dsr6]{} Operator at the console puts the east and west side ropes in constant tension mode to allow the physical detachment.
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > moveew+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=dsr7]{} The primary operator at the south gloveports reaches in and grasps the source at the lower part of the carriage. Make sure your hand is low enough that the pulleys will pivot. \\ {\it During this procedure the source will be pulled away from its normal vertical position under the gatevalve. This means that the source will swing if the operator lets go of it causing damage to both the detector and the source. {\bf Be extremely careful!}}
+\item \CheckBox[name=dsr8]{} Another operator at the east gloveports hold his or her hand near the source ready to receive the east rope.
+\item \CheckBox[name=dsr9]{} The southrope operator holds the source with his or her left hand and detaches the east rope with his or her right hand. \\ {\it The easiest way to do this is to hold the rope above the carriage  with a tiny amount of slack in the rope below. Gently work the slack line out of the slot.}
+\item \CheckBox[name=dsr10]{} The south port operator now passes the east rope to the east port operator {\bf but does not let go of the rope until the east port operator confirms that he or she has hold of it.}\\ {\it The handover must be done in a controlled manner with tension on the siderope at all times. Make sure the other person is aware of what is about to happen. Ask and receive confirmation before proceeding with each step of the handover.}
+\item \CheckBox[name=dsr11]{} The east port operator gently moves the east rope back to its vertical resting position while keeping tension on the rope at all times. \\ {\it A good way to move the side ropes is to think of them as bow strings as in a bow and arrow. The way to move the rope is to hook it with a finger and slowly pull it sideways. What the operator should try avoiding is pulling down on the rope such that it goes slack down in the vessel.}
+\item \CheckBox[name=dsr12]{} The south port operator switches the source to his or her right hand.
+\item \CheckBox[name=dsr13]{} The east port operator or a third operator gets ready to receive the west rope from the west side ports.
+\item \CheckBox[name=dsr14]{} South port operator detaches west rope. \\ {\it Hold the source with your right hand on the lower part of the carriage. Make sure there is room for the pulleys to pivot. Hold the tensioned west rope with your left hand above the pulley with a tiny amount of slack below and work the slack part of the rope out of the slot.}
+\item \CheckBox[name=dsr15]{} Hand the west rope to the west port operator who allows the rope to slowly relax to its resting position. \\ {\it The handover must be done in a controlled manner with tension on the siderope at all times. Make sure the other person is aware of what is about to happen. Ask and receive confirmation before proceeding with each step of the handover.}
+\item \CheckBox[name=dsr16]{} South port operator moves the source back to its resting position under the gatevalve. {\bf Do it slowly and don't let the source swing!}\\ {\it Hold the source with the palm of your hand {\bf behind} the source as you move it towards the gatevalve. This way you will not pull the source too far to the other side.}
+\item \CheckBox[name=dsr17]{} Console operator takes the side ropes out fo constant tension mode by pressing the STOP button (the ESC key) or by typing the command
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+console & \verb+manip > stop+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=dsr18]{} Close all glove ports on glovebox.
+\end{enumerate}
+
+\section{Revision History}
+\begin{tabular}{|c|c|c|p{6cm}|}
+\hline\hline
+\multicolumn{4}{|l|}{Originating Date: 2017-07-13}\\
+\hline
+Revision No. & Effective Date & Author & Summary of Change \\
+& (YYYY-MM-DD) & & \\
+\hline
+01 & 2017-07-13 & Ryan Bayes & Drafted from SNO Calibration Operators Manual (Manipulator Operation Procedures, Revision 2) with minor revisions and editable blocks added for user notes. Included corrections from Erica Cadens to the URM light leak check section. \\
+\hline
+& & & \\
+\hline
+& & & \\
+\hline \hline
+
+\end{tabular}
+
+
+\end{document}
