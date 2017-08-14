@@ -244,11 +244,14 @@ console & \verb+ manip > eastrope tension 15 +\\
 \item \CheckBox[name=cesr4]{} Check what the tension is by doing a 
 \begin{center}
 \begin{tabular}{|c|c|}
+\hline
 console & \verb+ manip > eastrope monitor+ \\
+\hline
 \end{tabular}
 \end{center}
 If the tension is within 0.2 N of zero there is no need to do the next two steps
 \item \CheckBox[name=cesr5]{} CAlirbation the loadcell offset. {\bf Mak sure the rope really has zero tension!} {\it Note the \verb+calibrate+ command is a "toggle" command.}
+\begin{center}
 	\begin{tabular}{|c|c|}
 	\hline
 	console & \verb+manip > eastrope calibrate+ \\
@@ -256,21 +259,28 @@ If the tension is within 0.2 N of zero there is no need to do the next two steps
 	              & \verb+manip > eastrope calibrate+ \\
 	           \hline
 	\end{tabular}
+	\end{center}
 {\it It is important that only one calibration point is used while the rope is in \verb+calibrate+ mode. Two or more points will change the slope of the calibtaion as well. Thus if you happend to mistype the \verb+point 0 N+, do {\bf not} under any circumstances just retype the \verb+point+ command! Instead, compete the calibration (i.e. exit \verb+calibration+ mode and re-do all three steps.}
 \item \CheckBox[name=cesr6]{} Check that the rope tension now reads 0 by using the monitor command,
+\begin{center}
 \begin{tabular}{|c|c|}
 \hline
 console & \verb+manip > eastrope monitor+ \\
 \hline
 \end{tabular}
+\end{center}
 and reading the rope tension.
 \item \CheckBox[name=cesr7]{} Wind the rope back in under constant tension.
 \begin{itemize}
 \item The person at the glovebox applies tension to the rope.
 \item Set the rope in constant tension mode.
+\begin{center}
 \begin{tabular}{|c|c|}
-console & \verb+manip > eastrope tension 15 \\
+\hline
+console & \verb+manip > eastrope tension 15+ \\
+\hline
 \end{tabular}
+\end{center}
 \item the persion holding the rope may now {\bf gently} let the motor take in the excess rope. {\bf Remember: slow movements only!}
 \item Once the excess rope has been taken up the person at the console types STOP (or hits the ESC key).
 \end{itemize}
@@ -282,17 +292,21 @@ The procedure for the west rope is identical to that for the east rope.
 Now that the side rope tension offsets have been calibration it is necessary to calibrate the rope lengths. This is done by calculating the rope length based on the positions of the rope attachment points. Before the actual calibration of the length is done, the side ropes are pulled tight to high tension and then relaxed. This is to prestretch the ropes.
 \begin{enumerate}
 \item \CheckBox[name=csrl1]{} Go to the expert mode at the manipulator console
+\begin{center}
 \begin{tabular}{|c|c|}
 \hline
 console & \verb+manip > expert room601+\\
 \hline
 \end{tabular}
+\end{center}
 \item \CheckBox[name=csrl2]{} Run the siderop calibration command file from the {\bf manip} console
+\begin{center}
 \begin{tabular}{|c|c|}
 \hline
 console & \verb+manip > calew+\\
 \hline
 \end{tabular}
+\end{center}
 {\it The command calew is actually a comand file that executes a series of commands. First the ropes are wound to 90 N tenstion and held there for 30 seconds. Then the ropes are relaxed to 10 N and then the rope lengths are set.}
 \item \CheckBox[name=csrl3] At the end of the calibration process, the change in the rope lengths are reported. If either of the changes in rope lengths are greater than 0.5~cm, repeat the calibration process. Recore the change in the rope length in the calibration logbook.
 \end{enumerate}
@@ -309,7 +323,7 @@ The source has been deployed into the glovebox from the source tube with the piv
 The N16 source is further away from the centre of the glovebox than the laserball. Some people find it easier to attach the side ropes to this source if it is at a slightly lower pivot position like 1370. Also, for the N16 source, the primary operator sits at the west gloveports.
 
 If, at some point in the procedure, you find that any of the operators cannot reach the side ropes or are unable to safely pass the ropes, undo all the steps completed in reverse order, and contact the OCE before regrouping and trying again. 
-\begin{enumarate}
+\begin{enumerate}
 \item \CheckBox[name=aesr1]{} Go to the expert mode at the manipulator console
 \begin{center}
 \begin{tabular}{|c|c|}
@@ -350,16 +364,20 @@ console & \verb+manip > laserball connect eastrope westrope+ \\
 \end{tabular}
 \end{center}
 {\it Once the (logical) connection is made the side rope in question will show up on the display. Note that the ropes can be connected one at a time if so desired.}
-\item \checkBox[name=aesr19]{} Set the source orientation (laserball only). The orientation is a number between 0 and 4. To list the possible orientation codes do a:
+\item \CheckBox[name=aesr19]{} Set the source orientation (laserball only). The orientation is a number between 0 and 4. To list the possible orientation codes do a:
 \begin{center}
 \begin{tabular}{|c|c|}
-console & manip > laserball orientation+ \\
+\hline
+console & \verb+manip > laserball orientation+ \\
+\hline
 \end{tabular}
 \end{center}
 To set the orientation to EAST do a:
 \begin{center}
 \begin{tabular}{|c|c|}
-console & manip > laserball orientation 2+ \\
+\hline
+console & \verb+manip > laserball orientation 2+ \\
+\hline
 \end{tabular}
 \end{center}
 \end{enumerate}
@@ -392,7 +410,9 @@ console & \verb+manip > expert room601+\\
 \item \CheckBox[name=dsr5]{} Operator at \verb+manip+ console logically detaches the side ropes from the laserball object.
 \begin{center}
 \begin{tabular}{|c|c|}
+\hline
 console & \verb+manip > laserball disconnects eastrope westrope+ \\
+\hline
 \end{tabular}
 \end{center}
 {\it The east and west ropes should disappear from the display. The laserball at this point becomes a single axis source (but the side ropes are still physically attached).}
