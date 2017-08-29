@@ -1,0 +1,384 @@
+\documentclass[10pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\pagestyle{fancy}
+\fancyhf{}
+% \lhead{\begin{tabular}{|p{8.25cm}} \hline {\large \bf SNO+ Laser Procedures} \\ \\ \\ \\ \end{tabular}}
+\lhead{\begin{tabular}{|p{8.25cm}|p{6cm}|}  
+	\hline 
+		{\large \bf SNO+ N16 Calibration Procedure}  
+										& Document No:  \\ 
+								\cline{2-2} & Revision No: 01\\  
+								\cline{2-2} & Effective Date: 2017-08-25\\ 
+								\cline{2-2} & Page \thepage \\  \end{tabular}}
+
+\usepackage{hyperref}
+
+\usepackage{geometry}
+% \geometry{top=2in}
+
+\begin{document}
+
+\begin{tabular}{||l|l|l||}
+\hline\hline
+& \multicolumn{2}{p{8cm}||}{\bf SNO+ N16 Calibration Procedure} \\
+\includegraphics[width=6cm]{../snolablogo.pdf} & \multicolumn{2}{p{8cm}||}{} \\
+\hline
+\multicolumn{2}{||p{8.5cm}|}{Document Number:} & Revision Number: 01\\
+\hline
+\multicolumn{3}{||l||}{Document Owner: SNO+ Calibration Post-Doc} \\
+\hline
+\multicolumn{3}{||l||}{Reviewer:}\\
+\hline
+Name: & Signature & Date \\
+\hline
+\multicolumn{3}{||l||}{Authorizer:}\\
+\hline
+Name: & Signature & Date \\
+\hline\hline
+\end{tabular}
+\thispagestyle{empty}
+
+\section{Purpose}
+
+This procedure describes, step by step, the process of performing an N16 calibration at the centre of the detector in single axis mode. It is intended as a guideline for operators who have been trained on the manipulator and N16. It assumes that the N16 source is mounted on URM3, located on the 6" gatevalve on the UI which is located on the northeast corner.
+
+\section{Outline of the procedure}
+
+\begin{enumerate}
+\item Prepare the URM for use (turn on N$_{2}$ supply etc.)
+\item Flush URM3 with N$_{2}$ gas to remove room air and radon.
+\item Calibrate URM3 central rope.
+\item Lower source into UI.
+\item Deploy source into detector.
+\item Take N16 data.
+\item Retract source into source tube above gatevalve.
+\item Shutdown N16 gas board and gas flow to laser and URM.
+\end{enumerate}
+You will need the following procedures to complete an N16 calibration.
+\begin{itemize}
+\item {\bf N16 Calibration} (this procedure)\\ \\ \\ \\ \\
+\item {\bf Central Rope Calibration Procedure} 
+\item {\bf DT Generator Turn On Procedure} 
+\item {\bf N16 Source Startup Procedure}
+\item {\bf N16 Source Shutdown Procedure}
+\item {\bf DT Generator Turn Off Procedure}
+\end{itemize}
+
+\section{Procedure}
+
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{} \\
+\multicolumn{2}{|l|}{\bf N16 Calibration Procedure} \\
+\multicolumn{2}{|l|}{} \\
+\hline
+& \\
+\TextField[name=n16op,backgroundcolor=0.975 0.975 0.975,width=2cm]{Operator: } &
+\TextField[name=n16d,backgroundcolor=0.975 0.975 0.975,width=4cm]{Date: } \\
+& \\
+\hline
+\end{tabular}
+
+The procedures in this section are intended to be followed sequentially for the N16 calibration except where it is noted that a following step can be skipped. Specifically, if the N16 is to be done in {\it single axis} mode, the side ropes do not need to be attached or detached from the source.
+
+{\bf Prior to N16}
+
+\begin{enumerate}
+\item \CheckBox[name=n16p1]{} Permission for procedure and confirmation of equipment readiness has been received from the Head of the Calibration Group.
+\item \CheckBox[name=n16p2]{} N16 is mounted on URM3 which is mounted on the UI 6" gatevalve.
+\item \CheckBox[name=n16p3]{} The gatevalve is closed and locked (or the handle is removed).
+
+{\bf Readying N16 Source and URM for Operation}
+
+\item \CheckBox[name=n16p4]{} Contact Detector Operator and verify that the DCR activity bit is set.
+\item \CheckBox[name=n16p5]{} Turn on lights in DCR following standard procedure.
+\item \CheckBox[name=n16p6]{} Verify that the high pressure N$_{2}$ to the laser is valved off (end of laser, upper right hand corner). 
+\item \CheckBox[name=n16p7]{} Verify that all valve on the gas board are closed and the regulator is set to zero.
+\item \CheckBox[name=n16p8]{} Remove the flush return line on the URM. {\it The presence of the buffer line makes it difficult to measure the O$_{2}$ from the URM.}
+\item \CheckBox[name=n16p9]{} Check that the flush inlet line is connected to URM3. If not connect it. Open the valve at the source tube. {\it It may be necessary to valve off the other URMs to get sufficient flow.}
+\item \CheckBox[name=n16p10]{} Verify that the LN$_{2}$ dewar in the junction is at least 1/4 full. If not swap it out with another dewar. Record liquid level of dewar,
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\\
+\TextField[name=n16n2l,backgroundcolor=0.975 0.975 0.975,width=2cm]{LN$_{2}$ Level:} \\
+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=n16p11]{} Verify that the dewar gas pressure is above 20 psig. If not, swap it out with another dewar. Unlike the laser the $^16$N does not require a minimum of 100 psig N$_{2}$ is only used for flushing. Note that this dewar won't last long if the pressure is below 100 psig.
+\item \CheckBox[name=n16p12]{} Turn on the high pressure N$_{2}$ flow from the dewar at junction (Marked {\bf Gas Use} on dewar).
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\\
+\TextField[name=n16n2t,backgroundcolor=0.975 0.975 0.975,width=2cm]{Note Time:} \\
+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=n16p13]{} Turn on pressure builder valve (Marked {\bf Pressure Builder} on dewar). {\it The pressure builder valve opens a controlled leak on the dewar to maintain the 150 psig pressure head. If the valve is not opened, the gas pressure to the laser and URM will eventually drop below the operating level (10 psig).}
+\item \CheckBox[name=n16p14]{} Set up Gas Board in "bypass mode" for "URM flush" only. If you are using the high pressure feed {\bf do not exceed} 10 psi on the regulator. {\it Bypass mod maximizes the flow to the URM. (Gas enters at top left hand corner, flows through the regulator along the outside right hand side line down the URM with all other valves closed --- see the Gas Board Section for details)}.
+\item \CheckBox[name=n16p15]{} Check that the flow meter (located at the east side of the pipe box) is railed. If not, open the needle valve near the flowmeter fully.\\ {\bf Flush should continue until O$_{2}$ reading at the rear of the URM is less than 0.8\%.} {\it This may take up to an hour depending on when the URM was last flushed.}
+\item \CheckBox[name=n16p16]{} Once the URM is flushedd the N$_{2}$ supply may be switched from the high pressure dewar to the Wessington dewar. Check with the Operations Group first before switching. Do not use the Wessington if a transfer is in progress. Consult the gasboard section for details on how to switch. If the flush is continued from the high pressure deewar reduce the flow using the needle valve. A setting of 2 full turns above the point where the flowmeter rails is sufficient.
+\item \CheckBox[name=n16p17]{} Verify (blue) valve on the N16 Umbilical gas feed line (the translucent line is OPEN. If not, open it.
+\item \CheckBox[name=n16p18]{} Execute the N16 PMT Turn On Procedure.
+\item \CheckBox[name=n16p19]{} Do not connect the PMT trigger cable to channel 4, slot 15 crate 17 before obtaining permission from the detector operator.
+\item \CheckBox[name=n16p20]{} Check that the source clamps are in the RELEASE position. There are two clamps. Check both. {\bf WARNING: The clamp positions RELEASE and HOLD are 90 deg apart. Rotate the clamp in the SHORT direction (90 deg) from the HOLD to RELEASE position. The clamp must not be rotated the other way!}\\ {\it The clamps are used to secure the source while the URM is being moved on and off the UI. If the source is moved with the clampes in the HOLD position, it may severely damage the manupulator and the umbilical.}
+\item \CheckBox[name=n16p21]{} Check the pressure on the air cylinder for the umbilical takeup mechanism. It should be between around 55 psig. {\bf Do not operate the URM if the pressure is below 40 psig.} If the pressure falls below 10 psig at any point (even momentarily) call the OCE. An internal inspection of the URM is mandatory before operating the unit again. {\it The pressure cylinder on the URM maintains tension on the umbilical takeup reel. A low gas pressure can result in the umbilical falling off the takeup reel and getting caught or jammed leading to destruction of the umbilical.} 
+\item \CheckBox[name=n16p22]{} Verify that Gate Valve 3 is closed and locked (or handle is removed). {\it The valve is CLOSED when the handle points towards the pipebox and the slot on the handle stem points AWAY from the source tube.} % Note this will change with the new gate valves
+\item \CheckBox[name=n16p23]{} Calibrate Central Rope Length (see procedure {\it Central Rope Position Calibration}). Record changes in length of central rope and umbilical. The current fiducial mark for URM3 on gatevate 3 is 
+\[
+z_{mark} = 1558.5
+\]
+Note: the fiducial mark is written on the source tube. If it differs from the above number use what is written on the source tube.
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\\
+\TextField[name=n16dl,backgroundcolor=0.975 0.975 0.975,width=3cm]{$\Delta l$ rope:}\\
+\\
+\hline
+\\
+\TextField[name=n16du,backgroundcolor=0.975 0.975 0.975,width=2cm]{$\Delta l$ umbilical:}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=n16p24]{} Check that all seals are in place on the URM. Including:
+	\begin{itemize}
+	\item \CheckBox[name=n16p24a]{} flush inlet line
+	\item \CheckBox[name=n16p24b]{} window on front of URM motorbox
+	\item \CheckBox[name=n16p24c]{} window on rear of URM motorbox
+	\item \CheckBox[name=n16p24d]{} umbilical feedthrough on rear of motorbox
+	\item \CheckBox[name=n16p24e]{} view port window cover on source tube
+	\item \CheckBox[name=n16p24f]{} window on rear of stretcher box
+	\end{itemize}
+{\it Note that the flush outlet is small enough and is small enough that it does not pose a threat to the detector unless light is shone directly into it.}
+\end{enumerate}
+
+{\bf Deploying Source from Source Tube Into Glovebox}
+
+\begin{enumerate}
+\item \CheckBox[name=n16d1]{} Verify that the URM is below approximately 0.8\% O$_{2}$.
+\item \CheckBox[name=n16d2]{} Check that the flush return line is connected to URM3. If not, connect it.
+{\it It may be necessary to move it from another URM.}
+% \item \CheckBox[name=n16d3]{} Turn off DCR lights.
+\item \CheckBox[name=n16d4]{} Record the Cover Gas O$_{2}$ level
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\\
+\TextField[name=n16co2,backgroundcolor=0.975 0.975 0.975,width=3cm]{Cover Gas O$_{2}$ Reading}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=n16d5]{} Establish communications with the detector operator. Ensure that they are watching the detector in maintenance mode and to communicate any changes in the detector rate.
+\item \CheckBox[name=n16d6]{} Open gate valve ({\bf Slowly}). Record the time the valve is opened
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\\
+\TextField[name=n16tgvo,,backgroundcolor=0.975 0.975 0.975,width=3cm]{Time Gate Valve Opened:}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=n16d7]{} Remove handle and key for gatevalve 3 and place {\bf Gatevalve Open} sign on valve.
+\item \CheckBox[name=n16d8]{} With a flashligh perform light leak check on URM. In particular check the seal of the source tube window and around the base of the source tube. Also, check around any inspection panel which may have been removed in the recent past.
+\item \CheckBox[name=n16d9]{} Bring up breaker 9 lights in the DCR with the detector operator watching the detector. If everything is okay bring up the other breakers. {\bf If there is any sign of a lightleak turn off the DCR lights immediately, close the gatevalve, and contact the OCE.}
+\item \CheckBox[name=n16d12]{} Orca is in a {\bf source transitional run}.
+\item \CheckBox[name=n16d13]{} Verify that {\bf manip\_logger} is running on the {\bf calibration} computer and logging the {\bf N16} source. This can be verified by opening \url{http://couch.ug.snopl.us/manip/_all_docs} and searching for the current date.
+\item \CheckBox[name=n16d14]{} Check movement of N16 down:
+	\begin{center}
+	\begin{tabular}{|l|l|}
+	\hline
+	console & \verb+manip > n16 by 0 0 -5+ \\
+	manmon & in n16 window: \\
+	& set x= 0, y= 0, z= -5 \\
+	& click on {\bf move by} \\
+	\hline
+	\end{tabular}
+	\end{center}
+{\it The N16 should move down 5~cm. The tension on the rope should be 90-110~N. The tension on the umbilical should be 10-40~N.}
+\item \CheckBox[name=n16d15]{} Deploy source into the UI:
+	\begin{center}
+	\begin{tabular}{|l|l|}
+	\hline
+	console & \verb+manip > n16 to 0 0 1370+ \\
+	manmon & in n16 window: \\
+	& set x= 0, y= 0, z= 1370 \\
+	& click on {\bf move to} \\
+	\hline
+	\end{tabular}
+	\end{center}
+\end{enumerate}
+
+{\bf Deploying Manipulator into Centre of Detector from UI}
+	
+\begin{enumerate}
+\item \CheckBox[name=n16c1]{} Contact Water Supervisor and advise him/her that the source is being lowered into the AV. {\it The water group maintains a very small differential pressure between the fluids inside and outside of the AV. The volume of the source is enough to disrupt this differential pressure and could result in and SDS trip.}
+\item \CheckBox[name=n16c2]{} Check tensions on URM3ROPE and URM3UMBILICAL. Rope tension should be approximately 90-110~N. Umbilical tension should be 20-40~N.
+\item \CheckBox[name=n16c3]{} Move N16 to centre of detector.
+	\begin{center}
+	\begin{tabular}{|l|l|}
+	\hline
+	console & \verb+manip > n16 to 0 0 71+ \\
+	manmon & in n16 window: \\
+	& click on {\bf Position the source} \\
+	& set x= 0, y= 0, z= 0 \\
+	& click on {\bf move to} \\
+	\hline
+	\end{tabular}
+	\end{center}
+As the source goes into the water, the rope tension will decrease to approximately 60~N and the umbilical to approximately 20~N
+\end{enumerate}
+
+{\bf Turning On N16 Source}
+
+\begin{enumerate}
+\item \CheckBox[name=n16t1]{} Check that you are familiar with the section on operating the DT generator and the associated gasboard especially the {\bf Emergency Shutdown Procedure}.
+\item \CheckBox[name=n16t2]{} Execute procedure, Turning on DT Generator
+\item \CheckBox[name=n16t3]{} Execute procedure, N16 Source Startup Procedure
+
+{\bf Taking N16 Data}
+
+\item \CheckBox[name=n16t4]{} Taking N16 Data. The exact nature of the N16 runs will vary. The "canonical" run tends to be 
+\begin{itemize}
+\item NOC setting of 10
+\item Target setting of 36.4
+\item Flow rate 280-300
+\end{itemize}
+\end{enumerate}
+
+{\bf Turning Off the N16 Source}
+
+\begin{enumerate}
+\item \CheckBox[name=n16sd1]{} Execute procedure, {\it Shutting Down N16 Gas System}
+\item \CheckBox[name=n16sd2]{} Execute procedure {\it Turning off DT Generator}
+\end{enumerate}
+
+{\bf Retracting Manipulator to UI}
+
+\begin{enumerate}
+\item \CheckBox[name=n16rmui1]{} Contact Water Supervisor. Inform him/her that the source is about to be removed from the Heavy water.
+\item \CheckBox[name=n16rmui2]{} Retract N16 from AV into UI
+	\begin{center}
+	\begin{tabular}{|l|l|}
+	\hline
+	console & \verb+manip > n16 to 0 0 1300+ \\
+	manmon & in n16 window: \\
+	& click on {\bf Position the pivot}\\
+	& set x= 0, y= 0, z= 1300 \\
+	& click on {\bf move to} \\
+	\hline
+	\end{tabular}
+	\end{center}
+{\it If sideropes are attached move the source to approximately z=1370 and disconnect the sideropes before retracting the source any further. See the siderope procedures. When moving the N16 to 1370, it is important to make sure you are moving the {\bf pivot}, not the centre of the source which is approximately 71 cm below the pivot. This is especially important if the sideropes are attached!}
+\end{enumerate}
+
+{\bf Retracting the Source Above the Gate Valve. Side Ropes NOT Attached}
+
+\begin{enumerate}
+\item \CheckBox[name=n16ragv1]{} move N16 to 1530
+	\begin{center}
+	\begin{tabular}{|l|l|}
+	\hline
+	console & \verb+manip > n16 to 0 0 1530+ \\
+	\hline
+	\end{tabular}
+	\end{center}
+\item \CheckBox[name=n16ragv2]{}move N16 to 1540
+	\begin{center}
+	\begin{tabular}{|l|l|}
+	\hline
+	console & \verb+manip > n16 to 0 0 1540+ \\
+	\hline
+	\end{tabular}
+	\end{center}
+\item \CheckBox[name=n16ragv3]{}move N16 to 1550
+	\begin{center}
+	\begin{tabular}{|l|l|}
+	\hline
+	console & \verb+manip > n16 to 0 0 1550+ \\
+	\hline
+	\end{tabular}
+	\end{center}
+{\bf NOTE: MINIMUM SAFE HEIGHT TO CLOSE GATEVALVE IS 1530~cm.\\
+if unable to get above this height (due to high tension, for example), contact OCE immediately.}
+%\item \CheckBox[name=n16ragv4]{} Remove "Gatevalve open" sign.
+\item \CheckBox[name=n16ragv5]{} Carefully close the gate valve by rotating the handle clockwise. {\it Expect resistance when the handle is about 3.4 of the way to the closed position. This is normal overcentering of the valve mechanism. {\bf If resistance is felt before this or if any sounds are heard that might be caused by the valve hitting the source, STOP and contact the OCE.}} Record the time the valve is closed.
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\\
+\TextField[name=n16tgvc,,backgroundcolor=0.975 0.975 0.975,width=3cm]{Time Gate Valve Closed:}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=n16ragv6]{} Remove handle and key.
+\item \CheckBox[name=n16ragv7]{} Record the Cover Gas O$_{2}$ level
+\begin{center}
+\begin{tabular}{|c|}
+\hline
+\\
+\TextField[name=n16co2c,backgroundcolor=0.975 0.975 0.975,width=3cm]{Cover Gas O$_{2}$ Reading}\\
+\\
+\hline
+\end{tabular}
+\end{center}
+\item \CheckBox[name=n16ragv8]{} Execute N16 PMT Turn Off Procedure.
+\item \CheckBox[name=n16ragv9]{} It is advisable to leave a slow N$_{2}$ flush of the URM in order to dry out the source and the inside of the URM. Contact the OCE to organize who will turn off the flow and when it should be done. If it is decided not to leave the flush on, follow the shutff procedure listed below:
+\item Turn off gas flow at the LN$_{2}$ dewar in the junction:
+	\begin{enumerate}
+	\item \CheckBox[name=n16ragv10a]{} close {\bf Gas Use} valve
+	\item \CheckBox[name=n16ragv10b]{} close {\bf Pressure Building} valve
+	\end{enumerate}
+\item \CheckBox[name=n16ragv11]{} Turn off the flush on the gasboard.
+\item \CheckBox[name=n16ragv12]{} Close the URM flush valve.
+\end{enumerate}
+
+{\bf After Calibration}
+
+\begin{enumerate}
+\item \CheckBox[name=n16ac1]{} Source is above gate valve.
+\item \CheckBox[name=n16ac2]{} Gate Valve is closed and handle plus key is removed.
+\item \CheckBox[name=n16ac3]{} N16 PMT Power Supply set to 0V, Turned off, NIM bin turned off.
+\item \CheckBox[name=n16ac4]{} N16 gas board is OFF.
+\item \CheckBox[name=n16ac5]{} DT Generator is OFF.
+\end{enumerate}
+
+\section{Revision History}
+\begin{tabular}{|c|c|c|p{6cm}|}
+\hline\hline
+\multicolumn{4}{|l|}{Originating Date: 2017-08-29}\\
+\hline
+Revision No. & Effective Date & Author & Summary of Change \\
+& (YYYY-MM-DD) & & \\
+\hline
+01 & 2017-08-29 & Ryan Bayes & Drafted from SNO Calibration Operators Manual (Manipulator Operation Procedures, Revision 2) with minor revisions and editable blocks added for user notes. \\
+\hline
+& & & \\
+\hline
+& & & \\
+\hline \hline
+
+\end{tabular}
+
+
+
+\end{document}
