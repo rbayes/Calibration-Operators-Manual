@@ -1,17 +1,4 @@
-\documentclass[11pt]{article}
-\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
-%\geometry{landscape}                % Activate for for rotated page geometry
-%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
-\usepackage{graphicx}
-\usepackage{amssymb}
-\usepackage{epstopdf}
-\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
 
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{fancyhdr}
-\pagestyle{fancy}
 \fancyhf{}
 % \lhead{\begin{tabular}{|p{8.25cm}} \hline {\large \bf SNO+ Laser Procedures} \\ \\ \\ \\ \end{tabular}}
 \lhead{\begin{tabular}{|p{8.25cm}|p{6cm}|}  
@@ -22,17 +9,11 @@
 								\cline{2-2} & Effective Date: 2017-06-14\\ 
 								\cline{2-2} & Page \thepage \\  \end{tabular}}
 
-\usepackage{hyperref}
-
-\usepackage{geometry}
-% \geometry{top=2in}
-
-\begin{document}
 
 \begin{tabular}{||l|l|l||}
 \hline\hline
 & \multicolumn{2}{p{8cm}||}{\bf SNO+ Laser Ball PCA Procedures} \\
-\includegraphics[width=6cm]{../snolablogo.pdf} & \multicolumn{2}{p{8cm}||}{} \\
+\includegraphics[width=6cm]{figures/SNOplus_logo.png} & \multicolumn{2}{p{8cm}||}{} \\
 \hline
 \multicolumn{2}{||p{8.5cm}|}{Document Number:} & Revision Number: 01\\
 \hline
@@ -226,7 +207,7 @@ Gas must flow through the laser for $\approx 10$ min before turning the laser hi
 \hline
 \end{tabular}
 \end{center}
-\item \CheckBox[name=rluo33]{} Verify OWL light monitor is on. Establish communications with person watching the light monitor. Suggestion: Station the person watching the OWL monitor at the monitor station. Then he/she can shout through the wall of the DCR and you don't need to use the phones which slow communications down.
+\item \CheckBox[name=rluo33]{} Establish communications with the detector operator and request that the detector be put in a {\bf Maintenance} run. 
 \item \CheckBox[name=rluo34]{} Open gate valve ({\bf Slowly!}). Record the time the valve is opened.
 \begin{center}
 \begin{tabular}{|c|}
@@ -320,7 +301,25 @@ manmon & in laser window: \\
 \end{center}
 Now wait 90 seconds while the trigger is delayed. Laser will come on at 10 Hz trigger rate.
 \item  \CheckBox[name=rlup52]{} Plug the Laserball Trigger signal into the EXTA input on the MTCD.
-
+The trigger should be setup from previous PCAs, but the setup should
+be verified.
+\begin{itemize}
+\item \CheckBox[name=vlts1]{} The cable running from port on the dye
+laser marked as ``Trigger'' leads to the NIM bin discriminator input.
+Ensure that the NIM bin is on.
+\item \CheckBox[name=vlts2]{} There should be a jumper across the
+``Delay'' channels of the NIM discriminator.
+\item \CheckBox[name=vlts3]{} The output channel on the NIM
+discriminator should be connected to the ``Input'' channel of the
+Stanford Research Pulse Generator. Ensure that the Stanford pulser is
+on and is using a trigger delay of 370 ns (press the ``DELAY'' button
+to check).
+\item \CheckBox[name=vlts4]{} The BNC cable leading to the MTCD should
+be connected to the ``A$\sqcap$B'' to make an ECA high signal.
+\textbf{Warning: TELLIE also uses the EXTA input. The TELLIE cable
+should be placed in a visible location after it is removed from the
+MTCD and muts be replaced when the PCA is complete.}
+\end{itemize}
 \subsection{Taking PCA Data}
 \item {\bf PCA Runs} The exact nature of the PCA runs will vary. The "canonical" run tends to be 
 	\begin{enumerate}
@@ -328,8 +327,9 @@ Now wait 90 seconds while the trigger is delayed. Laser will come on at 10 Hz tr
 		\begin{itemize}
 		\item 500~nm
 		\item The centroid for the raw TAC is usually at 1800.
-		\item 5-8\% occupancy (ND setting at 500~nm is approximately 3.5).
-		\item 40 Hz laser trigger rate (or best you can do without buffer overflow).
+		\item 5-8\% occupancy (ND setting at 500~nm is
+	approximately 1.2 to produce less than 500 NHIT per pulse).
+		\item 35 Hz laser trigger rate.
 		\item Run Type: LASERBALL\_PCA
 		\item 10 subruns (2-3 hours)
 		\end{itemize}
@@ -345,7 +345,8 @@ Now wait 90 seconds while the trigger is delayed. Laser will come on at 10 Hz tr
 	\end{enumerate}
 	The laser can be run up to 45~Hz but the DAQ produces strange results at such rates.
 \subsection{Turning Off Laser}
-\item \CheckBox[name=TOL1]{} Unplug EXTA at the MTCD.
+\item \CheckBox[name=TOL1]{} Unplug EXTA at the MTCD. Replace the
+	TELLIE cable.
 \item \CheckBox[name=TOL2]{} Turn off laser light  
 \begin{center}
 \begin{tabular}{|l|l|}
@@ -479,5 +480,4 @@ Revision No. & Effective Date & Author & Summary of Change \\
 \end{tabular}
 
 
-\end{document}
 

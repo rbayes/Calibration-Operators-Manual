@@ -1,0 +1,198 @@
+
+
+\fancyhf{}
+% \lhead{\begin{tabular}{|p{8.25cm}} \hline {\large \bf SNO+ Laser Procedures} \\ \\ \\ \\ \end{tabular}}
+\lhead{\begin{tabular}{|p{8.25cm}|p{6cm}|}  
+	\hline 
+		{\large \bf Salt Oven Usage Procedures}  
+										& Document No:  \\ 
+								\cline{2-2} & Revision No: 01\\  
+								\cline{2-2} & Effective Date: 2018-04-30\\ 
+								\cline{2-2} & Page \thepage \\  \end{tabular}}
+
+
+
+
+\begin{tabular}{||l|l|l||}
+\hline\hline
+& \multicolumn{2}{p{8cm}||}{\bf Salt Oven Usage Procedures} \\
+\includegraphics[width=6cm]{figures/SNOplus_logo.png} & \multicolumn{2}{p{8cm}||}{} \\
+\hline
+\multicolumn{2}{||p{8.5cm}|}{Document Number:} & Revision Number: 01\\
+\hline
+\multicolumn{3}{||l||}{Document Owner: SNO+ Calibration Post-Doc} \\
+\hline
+\multicolumn{3}{||l||}{Reviewer:}\\
+\hline
+Name: & Signature & Date \\
+\hline
+\multicolumn{3}{||l||}{Authorizer:}\\
+\hline
+Name: & Signature & Date \\
+\hline\hline
+\end{tabular}
+\thispagestyle{empty}
+
+
+\section{Purpose}
+This document describes the procedure for preparing and operating the Barnstead Thermolyne F21100 for use with a Sodium Chloride (NaCl) loaded quartz tube. The tube furnace heats the salt to a desired temperature of ~610C, just below its melting point. A stream of Helium flows through the heated tube, along with the heated NaCl aerosol. The tube has a water cooling section before the gas outlet, preventing damage to the following gas lines and the Umbilical. 
+
+These procedures are meant to suppliment the use of the DT generator
+in the operation of the Cherenkov source for the production of
+$^{8}$Li. Any operations that will require the salt oven will also
+require the DT Generator procedures. Some operations given here will
+supercede those given in the DT Generator procedures as stated in the
+Cherenkov deployment procedures. 
+
+\paragraph{Warnings}
+\begin{small}
+Refer to THA for required precautions needed for tube furnace operations. 
+Always use heat resistance gloves when handling the salt tube.
+Ensure a proper barricade is in place around the oven work space.
+Ensure proper signage is in place to warn others of the hazards present beyond the barricade. 
+\end{small}
+
+\section{Procedures}
+\subsection{Preparing Oven}
+\begin{enumerate}
+\item \CheckBox[name=oprep1]{} Only use Tube Furnace in designated area
+\item \CheckBox[name=oprep2]{} Make sure the furnace is empty before loading the salt tube
+\item \CheckBox[name=oprep3]{} Load the salt tube in the oven
+\item \CheckBox[name=oprep4]{} Connect Helium gas inlet and outlet to the tube
+\item \CheckBox[name=oprep5]{} Connect the output end to the water cooling loop using the attached flex hose
+\end{enumerate}
+
+\subsection{Starting Water Cooling Loop}
+\begin{enumerate}
+\item \CheckBox[name=cloop1]{} Ensure the needle valve behind the gas board is closed.
+\item \CheckBox[name=cloop2]{} Check that the inlet line is attached to the water line after the valve and that the outlet line is running into the drain channel.
+\item \CheckBox[name=cloop3]{} Insert the input line into the sleeve on the salt tube closer to the oven. Clamp the line using the hose clamp provided.
+\item \CheckBox[name=cloop4]{} Insert the output line into the sleeve on the salt oven nearer to the He gas outlet. Clamp the line using the hose clamp provided.
+\item \CheckBox[name=cloop5]{} Slowly open the valve. Ensure that all of the bubbles are out of the line before starting the Helium flow.
+\item \CheckBox[name=cloop6]{} Check the seal on the input and output lines for water leaks. If the water pressure is too high water will leak from the cooling loop connections. If there is a leak close the water valve until the leak is no longer present.
+\end{enumerate}
+
+
+\subsection{Turn on Oven}
+\begin{enumerate}
+\item \CheckBox[name=toov1]{} {Turn on the furnace, make sure the setpoint is 615C}
+\item \CheckBox[name=toov2]{} {Use the “UP” or “DOWN” button while in the home display to change the setpoint}
+%\end{eu}
+\subsubsection{Tuning Cycle}
+%\begin{itemize}
+\item \CheckBox[name=toov3]{} {Press the “PAGE” button until “Atun” is displayed}
+\item \CheckBox[name=toov4]{} {Press the “SCROLL” button, the display will read \textbf{tunE}}
+\item \CheckBox[name=toov5]{} {Press either “UP” or “DOWN”  to select \textbf{ON}}
+\item \CheckBox[name=toov6]{} {Press both “SCROLL” and “PAGE” to return to the main display }
+\item \CheckBox[name=toov7]{} {Wait for the tuning to complete}
+%\end{}
+\subsubsection{Continuous Heating}
+%\begin{itemize}
+\item \CheckBox[name=toov8]{} {Press the “PAGE” button until \textbf{SP} is displayed }
+\item \CheckBox[name=toov9]{} {Press the “SCROLL” button until \textbf{tm.OP} is displayed }
+\item \CheckBox[name=toov10]{} {Press either “UP” or “DOWN”  to select \textbf{Opt.2}. This setting will ramp and maintain setpoint temperature}
+\item \CheckBox[name=toov11]{} {Press the “SCROLL” button until \textbf{StAt} is displayed}
+\item \CheckBox[name=toov12]{} {Press either “UP” or “DOWN”  to select \textbf{run} }
+\item \CheckBox[name=toov13]{} {Press both “SCROLL” and “PAGE” to return to the main display  }
+\end{enumerate}
+
+\section{Flow Gas}
+\begin{enumerate}
+\item \CheckBox[name=gflow1]{} Ensure that all of the valves on the gas board are closed.
+\item \CheckBox[name=gflow2]{} Check that the valves on the He, N$_{2}$, and CO$_{2}$ bottles are closed.
+\item \CheckBox[name=gflow3]{} Verify that the "Solenoid Valve II" switch is in the OFF position.
+\item \CheckBox[name=gflow4]{} Enter the DCR using standard entry procedure and verify that
+	\begin{itemize}
+	\item \CheckBox[name=gflow5]{} the gas input line is connected to the "dry" end of the umbilical
+	\item \CheckBox[name=gflow6]{} the gas return line is connected to the "dry" end of the umbilical.
+	% \item the pressure transducer is powered up and that a voltmeter is connected to it
+	\end{itemize}
+\item \CheckBox[name=gflow7]{} Turn on the power onf the main instrument panel and the dual flow controller box.
+\item \CheckBox[name=gflow8]{} Flip the switch on the flow controller box to "B" (for N$_{2}$ and/or CO$_{2}$). The reading takes a few minutes to equilibrate to zero or near zero. 
+\item \CheckBox[name=gflow9]{} Ensure that the CO$_{2}$ and He bottles are hooked up to the input line at VA2. Ensure that the N$_{2}$ bottle is connected to VA1.
+\item \CheckBox[name=gflow10]{} Check that VA2 and VA2 are closed.
+\item \CheckBox[name=gflow11]{} Close the needle valve on the CO$_2$ bottle.
+\item \CheckBox[name=gflow12]{} Open the main valves on the CO$_{2}$, He and N$_{2}$ bottles.
+\item \CheckBox[name=gflow13]{} Set the regulator on the CO$_{2}$ and He bottle to 33~psi. Set the N$_{2}$ regulator to 20~psi.
+\item \CheckBox[name=gflow14]{} Record the bottle pressure:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Transducer & Reading \\
+\hline
+CO$_{2}$ Bottle Pressure & \\
+\hline
+He Bottle Pressure & \\
+\hline
+N$_{2}$ Bottle Pressure & \\
+\hline
+\end{tabular}
+\end{center}
+{\emph The pressure of a full CO$_{2}$ bottle is 850 to 900~psi. The
+  CO$_{2}$ in the bottle is in liquid or solid form and the pressure
+  will stay relatively high until gas only and will drop rapidly
+  thereafter. The helium bottle is simply gas under pressure and the
+  pressure will drain steadily throughout its use. }
+% \item Open the inlie needle valve after the CO$_{2}$ regulator.
+\item \CheckBox[name=gflow15]{} Open SVII by setting the switch on the main control panel to
+  {\bf MAN}.
+\item \CheckBox[name=gflow16]{} Open the manual shut off valve VB2
+\item \CheckBox[name=gflow17]{} Direct flow to the He flow meter using valve VD1.
+\item \CheckBox[name=gflow18]{} Set the He flow meter to manual and turn the control knob one
+  turn so that some gas will flow.
+\item \CheckBox[name=gflow19]{} Direct flow towards the He flow meter using valve VD1.
+\item Direct flow to the Salt Oven using valve VF1.
+\item \CheckBox[name=gflow20]{} Open SVI by setting the switch on the main control panel to
+  {\bf MAN}.
+\item \CheckBox[name=gflow21]{} Open the manual shut off valve VB1.
+\item \CheckBox[name=gflow22]{} Set the N$_{2}$ flow meter to manual and turn the control knob
+  one quarter turn.
+\item \CheckBox[name=gflow23]{} Direct the N$_{2}$ flow toward P1 (and VF1) so that the N$_{2}$
+  mixes with the He flow.
+\item \CheckBox[name=gflow24]{} Open valve VF2 to accept the returning CO$_{2}$.
+\item \CheckBox[name=gflow25]{} Open valve VC2.
+\item \CheckBox[name=gflow26]{} Direct the flow towards the exhaust using valve VB4.
+\item \CheckBox[name=gflow27]{} Open the exhast needle valve VA4 fully.
+\item \CheckBox[name=gflow28]{} {\bf Slowly} open valve VA2 and look to see if gas is flowing.
+\item \CheckBox[name=gflow29]{} {\bf Slowly} increase the flow until you reach around a 200-280
+  reading. Make sure P1 never goes above 100 PSI. Remember that the
+  time constants are long.
+\item \CheckBox[name=gflow30]{} Record gas Pressures and Flow.
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Transducer & Reading \\
+\hline
+P1 & \\
+(PSIA) & \\
+\hline
+P2 & \\
+(PSIA) & \\
+\hline
+P1 & \\
+(PSIA) & \\
+\hline
+P2 & \\
+(PSIA) & \\
+\hline
+Flow & \\
+(cc/s $\times$ (1/1000)) & \\
+\hline
+Target & \\
+Position & \\
+\end{tabular}
+\end{center}
+  
+\end{enumerate}
+
+\section{Turn off Oven}
+\begin{enumerate}
+\item \CheckBox[name=ofov1]{} {Press the “PAGE” button until \textbf{SP} is displayed }
+\item \CheckBox[name=ofov2]{} {Press the “SCROLL” button until \textbf{StAt} is displayed}
+\item \CheckBox[name=ofov3]{} {Press either “UP” or “DOWN”  to select \textbf{off} }
+\item \CheckBox[name=ofov4]{} {Press both “SCROLL” and “PAGE” to return to the main display  }
+\item \CheckBox[name=ofov5]{} {The oven should start to lose heat, let the salt tube cool to ambient temperature}
+\item \CheckBox[name=ofov6]{} {Turn off tube furnace}
+\end{enumerate}
+
+
