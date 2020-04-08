@@ -1,0 +1,216 @@
+\documentclass[10pt]{article}
+\usepackage{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{enumitem}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{verbatim}
+\pagestyle{fancy}
+
+\usepackage{hyperref}
+
+\usepackage{geometry}
+% \geometry{top=2in}
+\fancyhf{}
+% \lhead{\begin{tabular}{|p{8.25cm}} \hline {\large \bf SNO+ Laser Procedures} \\ \\ \\ \\ \end{tabular}}
+\lhead{\begin{tabular}{|p{8.25cm}|p{6cm}|}  
+	\hline 
+		{\large \bf Salt Oven Usage Procedures}  
+										& Document No:  \\ 
+								\cline{2-2} & Revision No: 01\\  
+								\cline{2-2} & Effective Date: 2018-04-30\\ 
+								\cline{2-2} & Page \thepage \\  \end{tabular}}
+
+
+
+\begin{document}
+\begin{tabular}{||l|l|l||}
+\hline\hline
+& \multicolumn{2}{p{8cm}||}{\bf Salt Oven Usage Procedures} \\
+% \includegraphics[width=6cm]{../SNOplus_logo.png} & \multicolumn{2}{p{8cm}||}{} \\
+\hline
+\multicolumn{2}{||p{8.5cm}|}{Document Number:} & Revision Number: 01\\
+\hline
+\multicolumn{3}{||l||}{Document Owner: SNO+ Calibration Post-Doc} \\
+\hline
+\multicolumn{3}{||l||}{Reviewer:}\\
+\hline
+Name: & Signature & Date \\
+\hline
+\multicolumn{3}{||l||}{Authorizer:}\\
+\hline
+Name: & Signature & Date \\
+\hline\hline
+\end{tabular}
+\thispagestyle{empty}
+
+
+\section{Purpose}
+This document describes the procedure for preparing and operating the Barnstead Thermolyne F21100 for use with a Sodium Chloride (NaCl) loaded quartz tube. The tube furnace heats the salt to a desired temperature of ~610C, just below its melting point. A stream of Helium flows through the heated tube, along with the heated NaCl aerosol. The tube has a water cooling section before the gas outlet, preventing damage to the following gas lines and the Umbilical. 
+
+
+\paragraph{Warnings}
+\begin{small}
+Refer to THA for required precautions needed for tube furnace operations. 
+Always use heat resistance gloves when handling the salt tube.
+Ensure a proper barricade is in place around the oven work space.
+Ensure proper signage is in place to warn others of the hazards present beyond the barricade. 
+\end{small}
+
+\begin{Form}
+
+\section{Preparing Oven}
+\begin{enumerate}[label={\CheckBox[name=oprep\theenumi]{}} {\arabic*}: ]
+\item Only use Tube Furnace in designated area
+\item Make sure the furnace is empty before loading the salt tube
+\item Load the salt tube in the oven
+\item Connect Helium gas inlet and outlet to the tube
+\item Connect the output end to the water cooling loop using the attached flex hose
+\end{enumerate}
+
+\section{Starting Water Cooling Loop}
+\begin{enumerate}[label={\CheckBox[name=cloop\theenumi]{}} {\arabic*}: ]
+\item Ensure the needle valve behind the gas board is closed.
+\item Check that the inlet line is attached to the water line after the valve and that the outlet line is running into the drain channel.
+\item Insert the input line into the sleeve on the salt tube closer to the oven. Clamp the line using the hose clamp provided.
+\item Insert the output line into the sleeve on the salt oven nearer to the He gas outlet. Clamp the line using the hose clamp provided.
+\item Slowly open the valve. Ensure that all of the bubbles are out of the line before starting the Helium flow.
+\item Check the seal on the input and output lines for water leaks. If the water pressure is too high water will leak from the cooling loop connections. If there is a leak close the water valve until the leak is no longer present.
+\end{enumerate}
+\\
+\\
+
+\section{Turn on Oven}
+\begin{enumerate}[label = {\CheckBox[name=toov\theenumi]{}} \arabic*:]
+\item{Turn on the furnace, make sure the setpoint is 615C}
+\item{Use the “UP” or “DOWN” button while in the home display to change the setpoint}
+%\end{eu}
+\subsection{Tuning Cycle}
+%\begin{itemize}
+\item{Press the “PAGE” button until “Atun” is displayed}
+\item{Press the “SCROLL” button, the display will read \textbf{tunE}}
+\item{Press either “UP” or “DOWN”  to select \textbf{ON}}
+\item{Press both “SCROLL” and “PAGE” to return to the main display }
+\item{Wait for the tuning to complete}
+%\end{}
+\subsection{Continuous Heating}
+%\begin{itemize}
+\item{Press the “PAGE” button until \textbf{SP} is displayed }
+\item{Press the “SCROLL” button until \textbf{tm.OP} is displayed }
+\item{Press either “UP” or “DOWN”  to select \textbf{Opt.2}. This setting will ramp and maintain setpoint temperature}
+\item{Press the “SCROLL” button until \textbf{StAt} is displayed}
+\item{Press either “UP” or “DOWN”  to select \textbf{run} }
+\item{Press both “SCROLL” and “PAGE” to return to the main display  }
+\end{enumerate}
+
+\section{Flow Gas}
+\begin{enumerate}[label={\CheckBox[name=gflow\theenumi]{}} {\arabic*}: ]
+\item Ensure that all of the valves on the gas board are closed.
+\item Check that the valves on the He, N$_{2}$, and CO$_{2}$ bottles are closed.
+\item Verify that the "Solenoid Valve II" switch is in the OFF position.
+\item Enter the DCR using standard entry procedure and verify that
+	\begin{itemize}
+	\item the gas input line is connected to the "dry" end of the umbilical
+	\item the gas return line is connected to the "dry" end of the umbilical.
+	% \item the pressure transducer is powered up and that a voltmeter is connected to it
+	\end{itemize}
+\item Turn on the power onf the main instrument panel and the dual flow controller box.
+\item Flip the switch on the flow controller box to "B" (for N$_{2}$ and/or CO$_{2}$). The reading takes a few minutes to equilibrate to zero or near zero. 
+\item Ensure that the CO$_{2}$ and He bottles are hooked up to the input line at VA2. Ensure that the N$_{2}$ bottle is connected to VA1.
+\item Check that VA2 and VA2 are closed.
+\item Close the needle valve on the CO$_2$ bottle.
+\item Open the main valves on the CO$_{2}$, He and N$_{2}$ bottles.
+\item Set the regulator on the CO$_{2}$ and He bottle to 33~psi. Set the N$_{2}$ regulator to 20~psi.
+\item Record the bottle pressure:
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Transducer & Reading \\
+\hline
+CO$_{2}$ Bottle Pressure & \\
+\hline
+He Bottle Pressure & \\
+\hline
+N$_{2}$ Bottle Pressure & \\
+\hline
+\end{tabular}
+\end{center}
+{\emph The pressure of a full CO$_{2}$ bottle is 850 to 900~psi. The
+  CO$_{2}$ in the bottle is in liquid or solid form and the pressure
+  will stay relatively high until gas only and will drop rapidly
+  thereafter. The helium bottle is simply gas under pressure and the
+  pressure will drain steadily throughout its use. }
+% \item Open the inlie needle valve after the CO$_{2}$ regulator.
+\item Open SVII by setting the switch on the main control panel to
+  {\bf MAN}.
+\item Open the manual shut off valve VB2
+\item Direct flow to the He flow meter using valve VD1.
+\item Set the He flow meter to manual and turn the control knob one
+  turn so that some gas will flow.
+\item Direct flow towards the He flow meter using valve VD1.
+\item Direct flow to the Salt Oven using valve VF1.
+\item Open SVI by setting the switch on the main control panel to
+  {\bf MAN}.
+\item Open the manual shut off valve VB1.
+\item Set the N$_{2}$ flow meter to manual and turn the control knob
+  one quarter turn.
+\item Direct the N$_{2}$ flow toward P1 (and VF1) so that the N$_{2}$
+  mixes with the He flow.
+\item Open valve VF2 to accept the returning CO$_{2}$.
+\item Open valve VC2.
+\item Direct the flow towards the exhaust using valve VB4.
+\item Open the exhast needle valve VA4 fully.
+\item {\bf Slowly} open valve VA2 and look to see if gas is flowing.
+\item {\bf Slowly} increase the flow until you reach around a 200-280
+  reading. Make sure P1 never goes above 100 PSI. Remember that the
+  time constants are long.
+\item Record gas Pressures and Flow.
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+Transducer & Reading \\
+\hline
+P1 & \\
+(PSIA) & \\
+\hline
+P2 & \\
+(PSIA) & \\
+\hline
+P1 & \\
+(PSIA) & \\
+\hline
+P2 & \\
+(PSIA) & \\
+\hline
+Flow & \\
+(cc/s $\times$ (1/1000)) & \\
+\hline
+Target & \\
+Position & \\
+\end{tabular}
+\end{center}
+  
+...
+\end{enumerate}
+
+\section{Turn off Oven}
+\begin{enumerate}[label={\CheckBox[name=prep\theenumi]{}} {\arabic*}: ]
+\item{Press the “PAGE” button until \textbf{SP} is displayed }
+\item{Press the “SCROLL” button until \textbf{StAt} is displayed}
+\item{Press either “UP” or “DOWN”  to select \textbf{off} }
+\item{Press both “SCROLL” and “PAGE” to return to the main display  }
+\item{The oven should start to lose heat, let the salt tube cool to ambient temperature}
+\item{Turn off tube furnace}
+\end{enumerate}
+
+\end{Form}
+
+\end{document}
