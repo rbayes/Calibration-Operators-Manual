@@ -24,14 +24,14 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: pdflatex SNO+CalibrationOperatorsManual.tex
+      run: latex SNO+CalibrationOperatorsManual.tex
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
       run: |
-        pdflatex SNO+CalibrationOperatorsManual.tex
-        pdflatex DTGenerator.tex
-        pdflatex SourceHandling.tex
-        pdflatex Encapsulated.tex
-        pdflatex Laser_Procedures.tex
-        pdflatex LaserballPCA.tex
+        latex SNO+CalibrationOperatorsManual.tex
+        latex DTGenerator.tex
+        latex SourceHandling.tex
+        latex Encapsulated.tex
+        latex Laser_Procedures.tex
+        latex LaserballPCA.tex
