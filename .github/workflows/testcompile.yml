@@ -13,7 +13,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  build_latex:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -21,17 +21,9 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    - name: Github Action for LaTeX
+      uses: xu-cheng/latex-action@1.2.1
+      with: 
+        root_file: SNO+CalibrationOperatorsManual.tex
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: pdflatex SNO+CalibrationOperatorsManual.tex
 
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        pdflatex SNO+CalibrationOperatorsManual.tex
-        pdflatex DTGenerator.tex
-        pdflatex SourceHandling.tex
-        pdflatex Encapsulated.tex
-        pdflatex Laser_Procedures.tex
-        pdflatex LaserballPCA.tex
