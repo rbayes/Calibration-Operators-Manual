@@ -21,17 +21,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    - name: Github Action for LaTeX
+      uses: xu-cheng/latex-action@1.2.1
+        with: SNO+CalibrationOperatorsManual.tex
 
-    # Runs a single command using the runners shell
-    - name: Run a one-line script
-      run: latex SNO+CalibrationOperatorsManual.tex
 
-    # Runs a set of commands using the runners shell
-    - name: Run a multi-line script
-      run: |
-        latex SNO+CalibrationOperatorsManual.tex
-        latex DTGenerator.tex
-        latex SourceHandling.tex
-        latex Encapsulated.tex
-        latex Laser_Procedures.tex
-        latex LaserballPCA.tex
