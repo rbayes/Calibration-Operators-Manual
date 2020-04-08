@@ -1,0 +1,438 @@
+\fancyhf{}
+% \lhead{\begin{tabular}{|p{8.25cm}} \hline {\large \bf SNO+ Laser Procedures} \\ \\ \\ \\ \end{tabular}}
+\lhead{\begin{tabular}{|p{8.25cm}|p{6cm}|}  
+	\hline 
+		{\large \bf Acrylic Calibration Procedure}  
+										& Document No:  \\ 
+								\cline{2-2} & Revision No: 01\\  
+								\cline{2-2} & Effective Date: 2017-08-25\\ 
+								\cline{2-2} & Page \thepage \\  \end{tabular}}
+
+
+
+\begin{tabular}{||l|l|l||}
+\hline\hline
+& \multicolumn{2}{p{8cm}||}{\bf Encapsulated Calibration Procedure} \\
+\includegraphics[width=6cm]{figures/SNOplus_logo.png} & \multicolumn{2}{p{8cm}||}{} \\
+\hline
+\multicolumn{2}{||p{8.5cm}|}{Document Number:} & Revision Number: 01\\
+\hline
+\multicolumn{3}{||l||}{Document Owner: SNO+ Calibration Post-Doc} \\
+\hline
+\multicolumn{3}{||l||}{Reviewer:}\\
+\hline
+Name: & Signature & Date \\
+\hline
+\multicolumn{3}{||l||}{Authorizer:}\\
+\hline
+Name: & Signature & Date \\
+\hline\hline
+\end{tabular}
+\thispagestyle{empty}
+
+\section{Purpose}
+
+The procedure describes step by strp the deployment process for an
+acryilic source into the AV. It is basically identical to the
+Laserball or N16 deploment procedure. It is intendedd as a guideline
+for operators who have been trained on the manipulator and laser. It
+assumes that the laserball is mounted on URM2 which is located on the
+10'' gatevalve on the UI.
+
+The outline of the procedure is:
+\begin{enumerate}
+\item Prepare the URM for use (turn on N$_{2}$ supply etc).
+\item Flush URM2 with N$_{2}$ gas to remove O$_{2}$ and Rn.
+\item Calibrate URM2 central rope.
+\item Lower source into glovebox.
+\item Conneect side ropes to source (if not single axis mode).
+\item Deploy source into detector.
+\item Take data.
+\item Retract source into UI.
+\item Remove side ropes (if not single axis mode).
+\item Retract source inot source tube above gatevalve.
+\item Shut down gas flow to URM.
+\end{enumerate}
+
+% \begin{form}
+
+\begin{tabular}{|l|l|}
+\hline
+\multicolumn{2}{|l|}{} \\
+\multicolumn{2}{|l|}{\bf Encapsulated Calibration Procedure} \\
+\multicolumn{2}{|l|}{} \\
+\hline
+& \\
+\TextField[name=acalop,backgroundcolor=0.975 0.975 0.975,width=2cm]{Operator: } &
+\TextField[name=acald,backgroundcolor=0.975 0.975 0.975,width=4cm]{Date: } \\
+& \\
+\hline
+\end{tabular}
+
+The procedures in this section are intended to be followed
+sequentially fro the source calibration except where it is noted the a
+following procedure can be skipped. Specifically if the source run is
+to be done in {\it single axis} mode, the side ropes do not need to be
+attached or detached from the source.
+
+
+{\bf Prior to Calibration Run}
+\begin{enumerate}
+  
+\item \CheckBox[name=encp1]{} Permission for procedure and confirmation of equipment rediness
+  has been received from Head of Calibration Group.
+  
+  \begin{center}
+    \begin{tabular}{|l|}
+      \hline
+      \\
+      \TextField[name=acalHCG,backgroundcolor=0.975 0.975
+        0.975,width=2cm]{Authorizor's name:}
+      \\
+      \hline
+    \end{tabular}
+  \end{center}
+  
+\item \CheckBox[name=encp2]{} Source is mounted in URM2 which is mounted on 10'' valve on UI.
+\item \CheckBox[name=encp3]{} 10'' gatevalve is closed and locked.
+
+  {\bf Readying URM from Operation}
+
+  \item \CheckBox[name=encp4]{} Verify that the LN$_{2}$ dewar in the junction is at least 1/4
+    full. If not sway is out with another dewar. Record the liquid
+    level of the dewar.
+    
+    \begin{center}
+      \begin{tabular}{|l|}
+        \hline
+        \\
+        \TextField[name=ln2level,backgroundcolor=0.975 0.975
+          0.975,width=2cm]{LN$_{2}$ Level:}\\
+        \\
+        \hline
+      \end{tabular}
+    \end{center}
+    
+\item \CheckBox[name=encp5]{} Verify that the dewar gas pressure is approximately 130 to 150
+  psig. If not, swap it out with another dewar.
+\item \CheckBox[name=encp6]{} Turn on N$_{2}$ flow to laser from dewar at junction.
+  
+  \begin{center}
+    \begin{tabular}{|l|}
+      \hline
+      \\
+      \TextField[name=n2time,backgroundcolor=0.975 0.975 0.975,
+        width=2cm]{Note Time:}\\
+      \\
+    \end{tabular}
+  \end{center}
+
+\item \CheckBox[name=encp7]{} Turn on pressure builder valve. {\it the pressure builder opens
+  a controlled leak on the dewar to maintain the 150 psi pressure
+  head. If the valve is not opened, the gas pressure to the laser
+  will eventually drop below the operating level.}
+\item \CheckBox[name=encp8]{} Once the URM is flushed, the N$_{2}$ supply may be switched
+  from the high pressure dewar to the Wessington dewar. Check with
+  the Operations Group first before switching. Do not use the
+  Wessington if a transfer is in progress. Consult the gasboard
+  section for details on how to switch.
+\item \CheckBox[name=encp9]{} Contact Detector Operator and get permission to enter DCR. Make
+  sure that the DCR activity bit is set.
+\item \CheckBox[name=encp10]{} Turn on lights in DCR following standard procedure. (See
+  Detector Operator Manual)
+\item \CheckBox[name=encp1]{} Remove the flush return line on the URM. {\it The presence of the
+  buffer line makes it difficult to measure the O$_{2}$ from the URM.}
+\item \CheckBox[name=encp11]{} Check that the flush inlet line is connected to URM2. If not
+  connect it. Open the valve on the source tube. {\it It may be
+    necessary to valve off other URMs to get sufficient flow.}
+\item \CheckBox[name=encp12]{} Set up Gas Board in `bypass mode' for `URM flush' only. If you
+  are using the high pressure feed {\bf do not exceed} 10 psi on the
+  regulator. {\it Bypass mode maximizes the flow to the URM.}
+\item \CheckBox[name=encp13]{} Check that the flow meter (located at the South-East corner of
+  the pipe box) is railed. If not, open needle valve near the
+  flowmeter fully. {\bf Flush should continue until O$_2$ reading at
+    the rear of the URM is less than 0.8\%.} {\it This may take up to
+    an hour depending on when the URM was last flushed.}
+\item \CheckBox[name=encp14]{} Check that the source clamps are in the OUT position. {\bf Both}
+  knobs have to be in the extreme {\bf OUT} position. {\bf WARNING: If
+    the source is moved with the clamps in the IN position, the
+    source, umbilical and manipulator may be severely damaged!} {\it
+    The clamps are used to secure the source while the URM is being
+    moved on and off the glovebox.}
+\item \CheckBox[name=encp15]{} Check the pressure on the air cylinder for the umbilical takeup
+  mechanism. It should be between 45 and 55 psig. {\bf DO not operate
+    the URM if the pressue is below 40 psig}. If the pressure falls
+  below 10 psig at any point (even momentarily) call the OCE. An
+  internal inspection of the URM is mandatory before operating the
+  unig again. {\it The pressure cylinder on the URM maintains tension
+    on the umbilical takeup reel. A low gas pressure can result in the
+    umbilical falling off the takeup reel and getting caught or jammed
+    leading to destruction of the umbilical.}
+\item \CheckBox[name=encp16]{} Verify that the 10'' gatevalve is locked in the closed
+  position. {\it The valve is CLOSED when the hangle points in toward
+    the pipes and the slot on the handle stem points AWAY from the
+    source tube.}
+\item \CheckBox[name=encp17]{} Calibrate Central Rope Length (see procedure). Record changes in
+  length of central rope and umbilical. The current fiducial mark for
+  URM2 on the 10'' gatevalve is
+  \[
+  z_{mark} = 1549.3
+  \]
+  Note: the fiducial mark is written on the source tube. If it
+  differes from the above number use it instead.
+
+  \begin{center}
+    \begin{tabular}{l}
+      \hline
+      \\
+      \TextField[name=crcal1,backgroundcolor=0.975 0.975 0.975,
+        width=2cm]{$\Delta$l rope:} \\
+      \\
+      \hline
+      \\
+      \TextField[name=cucal1,backgroundcolor=0.975 0.975 0.975,
+        width=2cm]{$\Delta$l rope:} \\
+      \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+\item \CheckBox[name=encp18]{} Check that all seals are in place on URM. Including:
+  \begin{itemize}
+  \item \CheckBox[name=encp19]{} flush inlet line
+  \item \CheckBox[name=encp20]{} window on front of URM motorbox
+  \item \CheckBox[name=encp21]{} window on rear of URM motorbox
+  \item \CheckBox[name=encp22]{} umbilical feedthrough on rear of motorbox
+  \item \CheckBox[name=encp23]{} view port window cover on source tube
+  \item \CheckBox[name=encp24]{} window on rear of stretcher box
+  \end{itemize}
+\item \CheckBox[name=encp25]{} Wait until the O$_{2}$ level in the URM is at or below 0.8\%
+
+  \begin{center}
+    {\bf Deploying Source rfom Source Tube Into Glovebox}
+  \end{center}
+  
+\item \CheckBox[name=encp26]{} Verify that the URM is below 0.8\% O$_{2}$.
+\item \CheckBox[name=encp27]{} Check that flush return line is connected to URM2. If not
+  connect it. {\it It may be necessary to move it from another URM.}
+\item \CheckBox[name=encp28]{} Turn off DCR lights.
+\item \CheckBox[name=encp29]{} Record the Cover Gas O$_{2}$ level
+  \begin{center}
+    \begin{tabular}{l}
+      \hline
+      \\
+      \TextField[name=cg0ra,backgroundcolor=0.975 0.975 0.975,
+        width=2cm]{Cover Gas O$_{2}$ Reading:}\\
+      \\
+      \hline
+    \end{tabular}
+  \end{center}
+\item \CheckBox[name=encp30]{} Establish communication with the detector operator. Ensure that
+  the detector is in a Transition run. The detector operator should
+  monitor the detector rates.
+\item \CheckBox[name=encp31]{} Open gate valve ({\bf Slowly!}.\\
+  Record the time the valve is opened.
+  \begin{center}
+    \begin{tabular}{|l|}
+      \hline \\ \TextField[name=tgvoa,backgroundcolor=0.975 0.975 0.975,
+        width=2cm]{Time Gate Valve Opened}\\
+      \\
+      \hline
+    \end{tabular}
+  \end{center}
+
+\item \CheckBox[name=encp32]{} Secure the gate valve either by locking or removing the handle.
+\item \CheckBox[name=encp33]{} With flashlight, and participation of the detector operator,
+  perform a light leak check on the URM. In particular, check the seal
+  of the source tube window and around the base of the source
+  tube. Also, check around any inspection panel which may have been
+  removed in the recent past.
+\item \CheckBox[name=encp34]{} Bring up the lights on breaker 9 in the DCR with the detector
+  operator monitoring the detector rate.
+\item \CheckBox[name=encp35]{} Verify that {\bf manip\_logger} is running on the calibration
+  computer and is logging the Encapsulated source by checking the latest
+  entries in couch.ug.snopl.us/manip/\_all\_docs.
+\item \CheckBox[name=encp36]{} Check movement of the acrylic source down:
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      console & \verb+manip > ambe by 0 0 -5+ \\
+      \hline
+      manmon & in ambe window: \\
+      & set x=0, y=0, z=-5\\
+      & click on {\bf move by} \\
+      \hline
+    \end{tabular}
+  \end{center}
+  {\it The source should move down 5 cm. The tension on the rope
+    should be 40-60 N. The tension on the umbilical should be 10-30
+    N.}
+\item \CheckBox[name=encp37]{} Check that the source offset is set correctly. At the console
+  type \verb+acrylic sourceoffset+. The actual offset depends on the
+  exact configuration (canned/un-canned, spacer present etc.)
+\item \CheckBox[name=encp38]{} Deploy source into the glovebox:
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      console & \verb+manip > ambe to 0 0 1380+ \\
+      \hline
+      manmon & in ambe window: \\
+      & set x=0, y=0, z=1380\\
+      & click on {\bf move to} \\
+      \hline
+    \end{tabular}
+  \end{center}
+\item \CheckBox[name=encp39]{} Contact Water Supervisor and advise him/her that the source is
+  being lowered into the D$_{2}$O. {\it The water group maintains a
+    very small differential pressure between the water inside and
+    outside of the heavy water. The volume of the source is enough to
+    disrupt this differential pressure.}
+\item \CheckBox[name=encp40]{} Check tension of urm2rope and urm2umbilical. Rope tension should
+  be approximately 30-50 N. Umbilical tension should be between 15-40
+  N. Note that the tensions are reduced once the source is submerged.
+\item \CheckBox[name=encp41]{} Move acrylic source to centre of detector (assuming source
+  offset is 70 cm).
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      console & \verb+manip > acrylic to 0 0 70+ \\
+      \hline
+      manmon & in acrylic window: \\
+      & set x=0, y=0, z=70\\
+      & click on {\bf move to} \\
+      \hline
+    \end{tabular}
+  \end{center}      
+\item \CheckBox[name=encp42]{} Take data. The exact configuration will vary.
+
+  \begin{center} {\bf Retracting Manipulator to UI} \end{center}
+
+\item \CheckBox[name=encp43]{} Contact Water Supervisor. Inform him/her that the source is
+  about to be removed from the D$_{2}$O.
+\item \CheckBox[name=encp44]{} Retract encapsulated source from AV into glovebox.
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      console & \verb+manip > ambe to 0 0 1300+ \\
+      \hline
+      manmon & in ambe window: \\
+      & set x=0, y=0, z=1300\\
+      & click on {\bf move to} \\
+      \hline
+    \end{tabular}
+  \end{center}
+\item \CheckBox[name=encp44]{} Retract encapsulated source to posisition to disconnect side ropes
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      console & \verb+manip > ambe to 0 0 1380+ \\
+      \hline
+      manmon & in ambe window: \\
+      & set x=0, y=0, z=1380\\
+      & click on {\bf move to} \\
+      \hline
+    \end{tabular}
+  \end{center}
+  {\it When moving the encapsulated source to 1380, it is important to make
+    sure you are moving with respect to the {\bf pivot} and not the
+    centre for the source which is approximately 70 cm below the
+    pivot. This is especially important if the sideropes are
+    attahced!}
+  
+  \begin{center} {\bf Retracting source above gate valve. Side ropes
+      NOT attached.}
+  \end{center}
+  
+\item \CheckBox[name=encp45]{} Move the encapsulated source to 1530
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      console & \verb+manip > ambe to 0 0 1530+ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\item \CheckBox[name=encp46]{} Move the encapsulated source to 1540
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      console & \verb+manip > ambe to 0 0 1540+ \\
+      \hline
+    \end{tabular}
+  \end{center}
+\item \CheckBox[name=encp47]{} Move the encapsulated source to 1550
+  \begin{center}
+    \begin{tabular}{|l|l|}
+      \hline
+      console & \verb+manip > ambe to 0 0 1550+ \\
+      \hline
+    \end{tabular}
+  \end{center}
+      {\bf NOTE:\\
+        MINIMUM SAFE HEIGHT TO CLOSE GATEVALVE IS 1535~cm.\\
+        If unable to get above this height, contact expert.}
+    \item \CheckBox[name=encp48]{} Retrieve the gatevalve key from the DCR lock box, if the
+      gate valve handle is locked. Retrieve the handle from the DCR
+      desk if the handle was removed.
+    \item \CheckBox[name=encp49]{} Ready the gatevalve to be closed by unlocking or replacing
+      the handle.
+    \item \CheckBox[name=encp50]{} Carefully close the gate valve by rotating the handle {\bf
+      clockwise}. {\it Expect resistance when the handle is about 3.4
+      of the way to the closed position. This is the normal
+      overcentering of the valve mechanism.} {\bf If resistance is
+      felt before this or if any sounds are heard that might be caused
+      by the valve hitting the source, STOP and contact and expert.}
+      Record the time the valve is closed.
+
+      \begin{center}
+        \begin{tabular}{|l|}
+          \hline \\ \TextField[name=tgvca,backgroundcolor=0.975 0.975 0.975,
+        width=2cm]{Time Gate Valve Closed}\\
+          \\
+          \hline
+        \end{tabular}
+      \end{center}
+
+    \item \CheckBox[name=encp51]{} Lock the gatevalve in the {\bf CLOSED} position.
+    \item \CheckBox[name=encp52]{} Return the gatevalve key to the DCR lock box.
+    \item \CheckBox[name=encp53]{} Record the Cover Gas O$_{2}$ level
+      
+      \begin{center}
+        \begin{tabular}{|l|}
+          \hline \\ \TextField[name=cgora1,backgroundcolor=0.975 0.975 0.975,
+        width=2cm]{Time Gate Valve Closed}\\
+          \\
+          \hline
+        \end{tabular}
+      \end{center}
+
+    \item \CheckBox[name=encp54]{} Close the URM flush valve if the source does not need drying
+      out. {\it It is desireable to leave a minute flow of N$_{2}$
+        through the URM in order to dry out the source and the
+        umbilical. Contact OCE for instruction.}
+    \item \CheckBox[name=encp55]{} Turn off the URM flush regulator (if the source does not
+      need drying out).
+    \item \CheckBox[name=encp56]{} If the laser is off, turn off the gas flow at the LN$_{2}$
+      dear in the junction:
+      \begin{enumerate}
+      \item \CheckBox[name=encp57]{} close the {\bf Gas Use} valve.
+      \item \CheckBox[name=encp1]{} close the {\bf Pressure Building} valve.
+      \end{enumerate}
+    \item \CheckBox[name=encp58]{} If the source is retracted, and gate valve closed, turn off
+      gas flow at the high pressure LN$_{2}$ dewar in the junction:
+      \begin{enumerate}
+      \item \CheckBox[name=encp59]{} close the {\bf Gas Use} valve.
+      \item \CheckBox[name=encp60]{} close the {\bf Pressure Building} valve.
+      \end{enumerate}
+      \begin{center} {\bf Afterr Calibration} \end{center}
+    \item \CheckBox[name=encp61]{} Source is above gate valve.
+    \item \CheckBox[name=encp62]{} Gate valve is closed and locked.
+    \item \CheckBox[name=encp63]{} High pressure LN$_{2}$ dewar is turned off (bot {\bf Gas
+      Use} valve and {\bf Pressure Building} valve) if source is not
+      to be dryed out.
+    \item \CheckBox[name=encp64]{} Flush return line is disconnected from rear of URM2.
+    \item \CheckBox[name=encp65]{} Gas board is set up to provide sufficient flow to dry out
+      the inside of the URM.
+\end{enumerate}
+
+% \end{form}
+

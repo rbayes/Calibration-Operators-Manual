@@ -1,0 +1,164 @@
+
+
+The SNO+ calibration manipulator is a positioning device used to place
+calibration sources inside the AV of the SNO+ detector or down
+calibration guide tubes in the region between the AV and PSUP. By
+using a system of three ropes; a central rope and two dside ropes, the
+manipulator is able to position a source on either an east-west (X-Z) or
+north-south (Y-Z) plane inside the AV. About 3/4 of the plane inside
+the AV can be reached by the manipulator, while the remaining quarter
+is not accessible due to physical limits of the manipulator system
+imposed by the geometry. In addition to the manipulator ropes, there
+is an umbilical attached to the manipulator that provides the
+necessary services for the source, such as electrical signals, fibre
+optics or gas lines.
+
+Each calibration source is stored in an Umbilical Retrieval Mechanism
+(URM) prior to deployment. A URM consists of a pair of blocks for
+taking up the source \textbf{Umbilical} used to provide services to
+the source and a \textbf{central rope} used to support the weight of
+the source. Below the URM is the \textbf{source tube} which is a 4'
+long stainless steel pipe used to store sources when not deployed in
+the vessel. Normally, the URM and source tube are mounted on a
+calibration port on the \textbf{universal interface} located directly
+over the neck of the acrylic vessel. When not in use, the source is
+stored in the source tube and a gate valve on the UI seals off the
+detector. The central rope in the URM is instrumented with a
+\textbf{shaft encoder} which determines the length of rope played out
+and a \textbf{load cell} used to measure the tension in the rope. The
+umbilical is similarly instrumented.
+
+The layout of the system is shown schematically in
+Fig.\ref{fig:manipschema}.
+
+\paragraph{Anchor Blocks}
+Each side rope can be thought of as attached at two points (not
+exactly true). At the feedthrough where it comes through the UI and at
+the \textbf{anchor block} in the AV which is located just above the AV
+equator. The end of the rope at the anchor block is fixed abd by
+playing the rop in or out through the UI feedthrough, the calibration
+source is moved about the AV.
+
+\paragraph{Calibration Guide Tubes}
+In addition to deploying sources through the glovebox into the center
+of the AV, it is possible to deploy sources through 6 calibration
+guide tubes into the cavity water volume between the AV and the
+PSUP. These guide tubes are located on the floor of the DCR and are
+sealed with gate valves.
+
+\paragraph{Carriage and Weight}
+Attached to each calibration source is a carriage and a weight. The
+carriage provides attachment points for the central rope and umbilical
+and has pullies that the side ropes go around. The weight cylinder is
+a stainless steel tube containing lead. The manipulator requires a
+miniumum weight for each source to function properly (in particular to
+give the sources negative bouyancy) and the wieght cylinder provides
+this.
+
+\paragraph{Deck Clean Room(DCR)}
+The DCR is the room centered on the deck. Most of the calibration
+equipment is located inside the DCR. The DCR is kept clean and has
+relatively few airborn particles compared to the rest of the lab. The
+clean conditions are maintained to prevent introduction of radioactive
+contamination into the detector during the deployment of sources.
+
+\paragraph{Universal Interface (UI)}
+The universal interface is a cylindrical box visible in the center of
+the DCR through which all of the services into the AV are routed using
+a large number of valves and flanges. Sensors, maintained by the
+scintillator group to monitor the AV levels, are installed on the UI
+alongside the three ports upon which the calibration sources may be
+mounted. Additionally, the side rope motor boxes and load cell boxes
+are mounted on the UI. The side ropes are attached to the manipulator
+carriage of a source using glove ports on the sides of the UI. These
+glove ports maintain the darkness within the AV and the integrity of
+the radon free cover gas that caps the AV.
+
+\paragraph{Rubbing Ring}
+The rubbing ring is an acrylic ring located just below the neck of the
+AV inside the target material volume. When the manipulator positions a
+source off the central axis, the manipulator ropes and the source
+umbilical are pulled to the side of the AV neck. The rubbing rung
+provides a wearing surface for the ropes.
+
+\paragraph{Side Rope Motor Mounts}
+The spooling mechanisms for the side ropes are mounted on the UI. The
+side rope motor boxes are connected to the AV cover gas through VCR
+fittings to extension boxes which also conduct the side ropes from the
+mechanism to the AV. The motor boxes themselves consist of a motor
+driven spool system instrumented with a loadcell to measure the rope
+tension and a shaft encoder to measure the rope length. There are four
+side ropes, North, South, East and West which are operated in pairs to
+allow positioning of the source inside the AV on and East-West or a
+North-South plane.
+
+\paragraph{Source Tube}
+The stainless steel tube connecting the URM to the calibration
+port. The calibration source is parked in the source tube when not
+deployed in the detector.
+
+The manipulator carriage and weight assembly is shown schematically in
+Fig.~\ref{fig:mancarriage}. It consists of the carriage to which the
+central rope is attached. The umbilical passes through the carriage
+neck, through the weight assembly into the source. The side ropes are
+not attached to the carriage, by rather pass around pullies mounted on
+the pully bar. The pully bar and carriage neck are free to rotate
+about the pivot. At different positions in the AV the pully bar and
+carriage neck will be at different orientations while the weight
+assembly and source will always hang vertically below the pivot.
+
+The weigth consists of a stainless steel torus filled with lead. The
+lead is potted into the weight cylinder with silicone and then capped
+with the cylinder end plate with is sealed with o-rings. Sources are
+usually attached to the weight cylinder using the extension tube.
+
+\section{Manipulator Control System}
+
+The manipulator is controlled by the \textbf{calibration} computer
+which is a CENTOS Linux PC running a C++ program called manip. The
+manip program interacts with the manipulator hardware by controlling a
+stepper motor for each axis to change the length of the rope or
+umbilical. A shaft encoder on each axis measures the length and a
+loadcell measures the tension. The shaft encoders and load cells are
+connected to \textbf{controller boxes}, one per two axes. Inside the
+controller box is a set of three AVR boards, two to control an axis
+(stepper motor, shaft encoder and load cell) and one to concentrate
+the data and communicate with the calibration computer via USB. Each
+controller box has a unique digital address which is identified as one
+of 12 AVR boards. The hub currently in use allows for the use of four
+control units at any given time which allows for the four side rope
+motor boxes and two URMs to be connected simultaneously. The
+N$_{2}$/dye laser is run using the same AVR boards, however it is
+connected via an independent USB cable to the calibration computer.
+
+\section{Modes of Source Deployment}
+
+\subsection{Single Axis Deployment}
+
+Sources can be deployed in a single axis mode which consists of
+lowering a source straight down from the URM on just the central rope
+and umbilical. The horizontal position of the source is determined by
+the location of the URM. The vertical position of the source is
+determined by the measured length of central rope played out. The
+single axis deployment mode is useful for operation along the central
+axis of the detector and for deployment of sources down the guide
+tubes.
+
+\subsection{Three Axis Deployment}
+
+The main purpose of the manipulator however, is to deploy a source off
+the central axis of the detector inside the acrylic vessel. This is
+done attaching two side ropes to the manipulator carriage once it is
+deployed into the glovebox. The side ropes are attached at one end to
+anchor blocks in the AV are anchored at the other end by feedthroughs
+on the glovebox. The side ropes go over pullies on the manipulator
+carriage. Once the source is lowered into the vessel, it can be pulled
+off the central axis by shortening one side rope and lengthening the
+other. Because only two side ropes are attached at a time, the source
+can only be moved in a plane. There are two sets of side ropes
+allowing motion in an east-west plane or a north-south plane. The side
+ropes are instrumented in the same fashion as the central rope with
+the side rope motor mounts located on the UI. The ropes pass through
+steel tubes, thence to extension boxes containing auxiliary pullys and
+into the AV. 
+

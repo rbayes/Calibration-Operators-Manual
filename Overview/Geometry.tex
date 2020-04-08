@@ -1,0 +1,188 @@
+
+
+\section{SNO+ Geometry and the Calibration System}
+
+When using the manipulator the user is positioning the carriage pivot
+in a coordinate system fixed to the AV. In SNO+ the acrylic vessel is
+a free floating entity. Measurements by the detector are collected by
+the PMT support structure which is fixed relative to the
+cavity. Neither the PSUP nor the AV are expected to be possess a
+mutual sensor, so the translation between the AV coordinate system and
+the PSUP coordinate system must be independently measured. The
+dimensions of the AV are given in Table~\ref{tab:avdims}.
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{llll}
+      \hline
+      measurement & dim(in) & dim(cm) & source \\
+      \hline
+      height of DCR floor & 100'=1200'' & 3048.00 & definition \\
+      height of global origin & 56' 7 1/2'' = 679.5'' & 1725.93 &
+      design \\
+      d(global origin to DCR floor) & 520.5'' & 1322.07 & calc. \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Global Coordinate System}
+  \label{tab:avdims}
+\end{table}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{llll}
+      \hline
+      Measurement & Dim(in) & Dim(cm) & Source \\
+      \hline
+      Height of 10'' gate valve from UI & 13 & & \\
+      Height of 6'' gate valve from UI & 8.25 & & \\
+      \hline
+      Height of Upper UI & 18.75 & & from Drawings\\
+      Lower UI top flange width & 0.87 & & from Drawings\\
+      Lower UI wall height & 28 & & from Drawings \\
+      Lower UI bottom flange width & 0.75 & & measured \\
+      UI height from top of lower UI bottom flange to top surface & 47.5625 & & measured \\
+      Gap between AV and UI & 0.5 & & measured \\
+      Height of UI top surface above AV center & 567.9725 & & calc. \\
+      \hline
+      URM1 source tube height to crosshairs & 41.85 & 106.3 & measured \\
+      URM1 crosshair height & 609.8228 & 1548.95 & calc. \\
+      URM2 source tube height to crosshairs & 40.812 & 103.66 & measured \\ 
+      URM2 crosshair height & 609.9725 & 1549.33 & calc. \\
+      URM3 source tube height to crosshairs & 43.819 & 111.3 & measured \\ 
+      URM3 crosshair height & 607.5725 & 1542.23 & calc. \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{}
+  \label{tab:UIheights}
+\end{table}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{llll}
+      \hline
+      Measurement & AV height(in) & AV height(cm) & source \\
+      \hline
+      Laser level & & \\
+      
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Dimensions of the SNO+ detector.}
+  \label{tab:avpsupmeas}
+\end{table}
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{llll}
+      \hline
+      measurement & dim (in)& dim (cm)& from \\
+      Average Vessel Inner Radius & 236.38$\pm$0.23'' &
+      600.41$\pm$0.58 & measurement\\ 
+      Top of Chimney to AV bottom & 742.59$\pm$0.05'' &
+      1886.18$\pm$0.13 & measurement\\ 
+      Top of Chimney to AV centre & 506.16$\pm$0.12'' & 1285.65$\pm$0.30 &
+      measured? \\
+      Neck Ring gasket & 1/8'' & 0.3175 & measured \\
+      Neck Ring plate & 3/8'' & 0.9525 & measured \\
+      AV Centre to AV top plate & 506.66'' & 1286.92 & calculated \\
+      DCR floor to AV top plate & 12.4375'' & 31.59 & measured/calculated\\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Dimensions of the SNO+ detector.}
+  \label{tab:avpsupmeas}
+\end{table}
+
+
+
+There are multiple methods for the measurement of the AV with respect
+to the AV. The first is a direct measurement of the top of the UI
+relative to the PSUP anchors using a laser level. This requires
+opening part of the light seal for the cavity so it is not something
+that can be repeated with a high regularity. Measurements using
+reflections of light from TELLIE has provided a very good measurement
+of the position of the AV with respect to the PSUP. This analysis can
+be repeated with the further TELLIE runs. Further measurements can be
+completed from the analysis of changes in the tensions on the hold
+down ropes although the initial lengths and positions are not well
+understood. The results of these measurements are given in
+Table~\ref{tab:avpsupmeas}.
+
+The relative positions of the guide tube gate valves have been
+measured with respect to the top of the AV. In the water phase the
+gate valves from SNO were used due to the low tolerances of the gate
+valves aquired for SNO+. These positions then give the total distance
+of the source from the center of the detector given the height of the
+source tubes. The measurements were conducted using a laser level and
+a measuring tape and compiled in Table~\ref{tab:guidetubeheight}.
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{cccccc}
+      \hline
+      Tube & X (cm)& Y (cm)& Enter PSUP & Z Leaves PSUP & Z Touches
+      AV(cm)\\
+      \hline
+      1&361.00&193.04& 734.36& &446.91 \\
+      2&-112.08& 104.14& 825.47& &586.44 \\
+      3&-361.00& 193.04& 733.51& &446.91 \\
+      4&-586.11& 207.96& 564.64& -564.64 & \\
+      5&-586.11&-252.41& 546.23& -546.23 & \\
+      6& 118.11&-119.38& 823.80& & 582.32\\
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Calibration Guide Tube Locations.}
+  \label{tab:guidtubeheight}
+\end{table}
+
+\section{Acrylic Vessel}
+The thermal expansion coefficient for the acrylic is
+\begin{math}
+  6\times 10^{-5}\textrm{C}^{-1}
+\end{math}
+The design specs for the AV give the distance from the top of the neck
+to the centre of the vessel at 23 C
+\begin{verbatim}
+42' 2 3/8''
+\end{verbatim}
+which is 506.375~cm and the nominal outside radius is
+\begin{verbatim}
+236.6''
+\end{verbatim}
+which is 600.964~cm with a nominal thickness of 2.15'' (5.461~cm).
+
+This can be compared to the results found in SNO-STR-98-003 (R. Komar)
+for actual measurements of the AV. Using the Komar measurements, the
+nominal dimensions of the AV are given in Table~\ref{tab:}. On top of the AV
+neck flange is a gasket (1/8'') and a stainless steel top plate
+(3/8''). This gives a distance from the centre of the AV to the top
+plate of,
+\begin{math}
+  506.16 + 1/8 + 3/8 = 506.66\textrm{in} = 1286.92\textrm{cm}
+\end{math}
+
+Recent measurements of the 
+
+\section{Calibration Guide Tubes}
+
+The locations of the calibration guide tubes in the Deck Clean Room
+are shown in Fig.~\ref{fig:deckplan} and Fig.~\ref{fig:gtelev}. The
+heights of the gate valves for the guide tubes as well as the heights
+of the mounted source tubes at the cross hairs is given in
+Table~\ref{tab:gtheights}.
+
+\begin{figure}
+
+  \caption{Deck plan of the DCR showing the positions of the guide
+    tubes}
+  \label{fig:deckplan}
+\end{figure}
+
+\begin{figure}
+
+  \caption{Elevations of the calibration guide tubes}
+  \label{fig:gtelev}
+\end{figure}

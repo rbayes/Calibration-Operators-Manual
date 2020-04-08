@@ -1,0 +1,17 @@
+
+
+The SNO+ calibration manipulator is a positioning device used to place
+calibraiton sources inside the AV of the SNO+ detector or down
+calibration guide tubes in the region between the AV and PSUP. By
+using a system of three ropes; a central rope and two dside ropes, the
+manipulator is able to position a source on either an east-west (X-Z) or
+north-south (Y-Z) plane inside the AV. About 3/4 of the plane inside
+the AV can be reached by the manipulator, while the remaining quarter
+is not accessible due to physical limits of the manipulator system
+imposed by the geometry. In addition to the manipulator ropes, there
+is an umbilical attached to the manipulator that provides the
+necessary services for the source, such as electrical signals, fibre
+optics or gas lines.
+
+Each calibration source is stroed in an Umbilical Retrieval Mechanism
+(URM) prior to deployment. A URM

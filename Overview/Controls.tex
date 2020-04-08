@@ -1,0 +1,70 @@
+
+Control of the calibration manipulator and the calibration laser is
+done through the \textbf{calibration} computer running the \textbf{manip}
+program which is a C++ program running on Linux. There are three ways
+for the operator to send commands to \textbf{manip}:
+\begin{itemize}
+\item From the \textbf{calibration} console in the DCR.
+\item From the \textbf{manmon} program running on a number of Linux
+  boxes.
+\end{itemize}
+When changing source or adjusting equipment in the DCR, the console is
+usually used. Otherwise the calibration operator usually interacts
+with the manipulator through \textbf{manmon}. The manipulator can be
+operated both from underground or from surface without any personnel
+in the lab. There is also a monitoring program running on
+\textbf{buffer1.sp.snolab.ca}. This program is called
+\textbf{manip\_logger} which generates a json document containing the
+current manipulator status and uploads the result to a couch database
+on the \textbf{snopl.us} server. The resulting files may be viewed
+from a web browser or downloaded directly.
+
+\section{Controlling and Monitoring the Manipulator from manmon}
+Nominal operatiorn of the mainipulator is through \textbf{manmon}
+which is a Tcl/Tk program which runs on various Linux workstations on
+site. Specifically the workstations
+
+\paragraph{monug1} The workstation in the underground control room.
+\paragraph{monag1} The workstation in the surface control room.
+\paragraph{monlu1} The workstation in the Laurentian control room.
+
+\textbf{manmon} provides a GUI interface to display the manipulator
+data and to allow the Calibration Operator to move sources or operate
+the calibration laser.
+
+\subsection{Starting manmon}
+\begin{enumerate}
+\item Log on to \textbf{monug1} as \textbf{snoperator}
+\item Go to the current manmon directory.
+\begin{verbatim}
+cd ~/manmon_3.00
+\end{verbatim}
+\item Start the \textbf{manmon} program by typing
+\begin{verbatim}
+manmon
+\end{verbatim}
+A GUI user interface will pop up Fig.~\ref{fig:manmonGUI}.
+\item The GUI connects to the calibration computer automatically, but
+  in case it does not, the connection may be forced by clicking on the
+  \textbf{connect} button. A window will pop up (see
+  Fig.\ref{fig:connect}) 
+\end{enumerate}
+The procedure is identical in the other control rooms.
+
+
+\section{Controlling the Manipulator from the Console}
+On the calibration computer, change to the directory
+\begin{verbatim}
+~/AVR32
+\end{verbatim}
+and run the program
+\begin{verbatim}
+./manip
+\end{verbatim}
+The basic commands are:
+\paragraph{help}
+\paragraph{list} lists all objects
+\paragraph{logout} disconnects the tcp/ip connection
+\paragraph{quit} exists program
+Commands for the \verb+prototyp+ object (typically a source object
+like \verb+laserball+, \verb+ambe+, \verb+li8+, etc.)

@@ -1,0 +1,116 @@
+
+\section{Introduction}
+
+SNO+ uses known optical and nuclear sources to measure its detector
+and material properties. The calibration systems deploy sources inside
+the acrylic vessel and the cavity.
+
+The calibration of the SNO+ detector can be divided into three
+aspects:
+\begin{enumerate}
+\item Calibration of the low level electronics channels (ECA).
+  \item Calibration of the phototube timing (PCA).
+
+The calibration systems in SNO+ are are situated in the Deck Clean
+Room (DCR) in the SNO cavity at SNOLAB. The clean room exists to
+minimize the amount of potential radon contamination. The central
+feature of the DCR is the Universal Interface (UI) to the Acrylic
+Vessel (AV) that is itself the centerpoint of the SNO+ experiment. The
+UI posseses three gate valves through which sources may be
+deployed. Two of these gate valves are typically occupied by source
+tubes which partially support Umbilical Retrieval Mechanisms (URMs)
+which control the vertical deployment of calibration sources. The URMs
+are also supported by a beam running across the The URMs
+use electric motors and a pneumatic piston to control the movement of
+a source by applying appropriate tension on the central rope and
+umbilical. The URM is instrumented with encoders and load cells so
+that the length and the tension on the umbilical and central rope are
+known. In the ideal case for a single axis deployment the tensions are
+balanced equally between the rope and the umbilical.
+
+The control of the source positions are supplimented by side
+ropes. These ropes are fixed to the inside of the AV and the tensions
+are controlled through the use of motors with load cell and encoder
+feed back. Sources ride along these ropes on pulleys so that the
+relative tension between the central rope and two side ropes guide the
+source within a plane. The side ropes are paired to guide the source
+in the X-Z plane (using the East and West side ropes) or the Y-Z plane
+(using the North and South side ropes).
+
+Further calibration can be conducted external to the AV. A system of
+laser fibers are embedded in on the PSUP for the Embedded LED Laser
+Injections Entity (ELLIE). This system 
+
+\section{SNO+ Geometry and the Calibration System}
+
+In SNO+ the acrylic vessel is a free floating entity. As such the
+equipment used to facilitate the internal calibration of SNO+ is
+physically fixed to the AV and so it has a coordinate system that is
+also based on the AV position. Measurements by the detector are
+collected by the PMT support structure, so there must be a translation
+between the AV coordinate system and the PSUP coordinate system. The
+dimensions of the AV are given in Table~\ref{tab:avdims}.
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{cc}
+
+    \end{tabular}
+  \end{center}
+  \caption{Dimensions of the SNO+ detector.}
+  \label{tab:avdims}
+\end{table}
+
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{cc}
+
+    \end{tabular}
+  \end{center}
+  \caption{Dimensions of the SNO+ detector.}
+  \label{tab:avpsupmeas}
+\end{table}
+
+
+There are multiple methods for the measurement of the AV with respect
+to the AV. The first is a direct measurement of the top of the UI
+relative to the PSUP anchors using a laser level. This requires
+opening part of the light seal for the cavity so it is not something
+that can be repeated with a high regularity. Measurements using
+reflections of light from TELLIE has provided a very good measurement
+of the position of the AV with respect to the PSUP. This analysis can
+be repeated with the further TELLIE runs. Further measurements can be
+completed from the analysis of changes in the tensions on the hold
+down ropes although the initial lengths and positions are not well
+understood. The results of these measurements are given in
+Table~\ref{tab:avpsupmeas}.
+
+The relative positions of the gate valves have been measured with
+respect to the top of the AV. In the water phase the gate valves from
+SNO were used due to the low tolerances of the gate valves aquired for
+SNO+. These positions then give the total distance of the source from
+the center of the detector given the height of the source tubes. The
+measurements were conducted using a laser level and a measuring
+tape and compiled in Table~\ref{tab:guidetubeheight}. Adaptors are
+required to accommodate both the 6 inch and 10 inch guide tubes which
+have been included in the height differences given.
+
+
+\begin{table}
+  \begin{center}
+    \begin{tabular}{p{4cm}c}
+      Description & Height difference \\
+      \hline
+      10'' gate valve to GT5 & 83.2 cm \\
+      6'' gate valve to GT5 & 73.89 cm \\
+      \hline
+      URM2 pivot on GT5 to AV center & 1466.1~cm\footnote{Do not drive
+        above 1454~cm. AmBe encapsulation rests on 
+        gate valve 1439.6~cm}\\
+      URM3 pivot on GT5 to AV center & 1468.34 cm \\
+    \end{tabular}
+  \end{center}
+  \caption{Measurements relating the guide tube to the UI gate valves.}
+  \label{tab:guidtubeheight}
+\end{table}
