@@ -10,13 +10,18 @@
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{fancyhdr}
-\usepackage{verbatim}
+
+\usepackage{fancyhdr,ragged2e}
+\fancyhead{}
+\lhead{\parbox[t]{0.4\textwidth}{\RaggedRight\rightmark\strut}}
+\rhead{\parbox[t]{0.4\textwidth}{\RaggedLeft\leftmark\strut}}
+\setlength{\headheight}{5\baselineskip}
 \pagestyle{fancy}
 
+\usepackage{verbatim}
 \usepackage{hyperref}
-
 \usepackage{geometry}
+\usepackage{siunitx}
 % \geometry{top=2in}
 
 \begin{document}
