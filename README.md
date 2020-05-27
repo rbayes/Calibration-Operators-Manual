@@ -13,7 +13,7 @@ May need to re-assess organisation of sections
 - manmon (for external systems)
 
 ## 3. Manipulator
-- needs updtae for hanger/bellows systems
+- needs update for hanger/bellows systems
 - external systems (possibly) need to be highlighted
 - double check that the computer system description is up to date
 
