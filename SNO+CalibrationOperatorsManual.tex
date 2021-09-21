@@ -30,16 +30,21 @@
 
 \begin{document}
 \maketitle
+% try to refactor sections based on readme
 \pagebreak
 \part{Overview}
 \include{Overview/Introduction}
-%\chapter{Manipulator}
+\chapter{Manipulator}
 \include{Overview/Manipulator}
 \chapter{Calibration Systems Overview}
 \include{Overview/Geometry}
+\include{Overview/CalibrationGasSystem}
+\include{Overview/Laser}
 \include{Overview/Laserball}
 \include{Overview/Cherenkov}
 \include{Overview/N16}
+\include{Overview/AmBe}
+\include{Overview/TaggedSource}
 \chapter{Manipulator Procedures}
 \include{Manipulator/body}
 \chapter{Laser Procedures}
@@ -57,11 +62,20 @@
 \include{StandardCalibrations/Encapsulated_body}
 \chapter{Cherenkov Source Calibration}
 \include{StandardCalibrations/CherenkovDeployment_body}
-
 \part{Scintillator Calibration Procedures}
 \chapter{Source Handling Procedures}
 %\include{ScintillatorSourceHandling/SourceHandlingBody}
 \include{ScintillatorSourceHandling/SCV_Referencemanual}
 \include{ScintillatorSourceHandling/SCV_Operator_Manual}
-
+% should also include specific cleaning procedures in this section
+\chapter{URM Procedures}
+% Maybe include umbilical cleaning procedures here
+\include{ScintillatorURMHandling/ScintURMLifting}
+\include{ScintillatorURMHandling/ScintURMMounting}
+\include{ScintillatorURMHandling/PumpPurge}
+\chapter{Source Deployment Procedures}
+\include{ScintillatorDeployment/LaserballPCA}
+\include{ScintillatorDeployment/AmBeCalibration}
+\include{ScintillatorDeployment/TaggedSourceDeployment}
+\include{ScintillatorDeployment/CherenkovDeployment}
 \end{document}

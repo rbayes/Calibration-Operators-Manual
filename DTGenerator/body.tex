@@ -112,15 +112,15 @@ This procedure describes how to turn on the DT generator prior to operating eith
 \item \CheckBox[name=dttop5]{} Secure the DT area: ensure that the shielding blocks (the "donuts") are in place and that the grey interlock boxes are in place and connected.
 \item \CheckBox[name=dttop6]{} Turn on the main instrument panel, the flow controller and the stepper motor controller.
 \item \CheckBox[name=dttop7]{} Set the Interlock Override on the main instrument panel to "On" for manual control (normal setting).
-\item \CheckBox[name=dttop8]{} Check the high Voltage (HV) and neutrino pulser switches on the DT control panel are in the OFF position.
-\item \CheckBox[name=dttop9]{} Set the Neutrino Pulse Control (NPC) to 5 and the Neutron Output Control (NOC) to 0.
+\item \CheckBox[name=dttop8]{} Check the high Voltage (HV) and neutron pulser switches on the DT control panel are in the OFF position.
+\item \CheckBox[name=dttop9]{} Set the Neutron Pulse Control (NPC) to 5 and the Neutron Output Control (NOC) to 0.
 \item \CheckBox[name=dttop10]{} Make sure the HV supply for the space NCD counter is turned off and the dial setting is at 0.
 \item \CheckBox[name=dttop11]{} Turn on the NIM bin with the Fast Neutrino Flux Meter (F.N.F.M.).
 \item \CheckBox[name=dttop12]{} Turn on the low voltage power supply for the NCD counter.
 \item \CheckBox[name=dttop13]{} Turn on the F.N.F.M high voltage supply and set the voltage to 800 V.
-\item \CheckBox[name=dttop14]{} Connect an oscilloscope to the spare NCD counter amplifier. Set timebase to approximately 1 $\mu$s/div and vertical scale to a small fraction of a volt per division.
+\item \CheckBox[name=dttop14]{} (Optional) Connect an oscilloscope to the spare NCD counter amplifier. Set timebase to approximately 1 $\mu$s/div and vertical scale to a small fraction of a volt per division.
 \item \CheckBox[name=dttop15]{} Turn on the HV for the space NCD counter. While watching the scope fro pulses slowly (about 1 minute) increase the voltage to 1850 V.
-\item \CheckBox[name=dttop16]{} Connect an oscilloscope to the SYNC output. Set timebase to approximately 2 ms full sweep.
+\item \CheckBox[name=dttop16]{} (Optional) Connect an oscilloscope to the SYNC output. Set timebase to approximately 2 ms full sweep.
 \item \CheckBox[name=dttop17]{} Insert the DT generator key and turn on the power.
 \item \CheckBox[name=dttop18]{} At this time, the main power light on the DT control panel, and the {\bf D.T. GEN ON} light located behind the DT Pit should be on. {\bf if either of these lights do not come on, proceed to step five in the shutdown procedure.} {\it The interlock system has many inputs any of which can cause the controller not to operate. One set of inputs come from the water sensors. There are currently 4 separate water sensors (3 in the DT pot and one in the sump). In addition the concrete blocks have to be in place (and wired) and there is a computer controlled input. Troubleshooting of this system is beyond the scope of this document.}
 \item \CheckBox[name=dttop19]{} Switch the neutron pulser on. Make sure that the neutron pulser light comes on. {\bf If the neutron pulser light does not come on, proceed to step number four of the shutdown procedure immediately.}
@@ -151,7 +151,7 @@ This procedure describes how to turn on the DT generator prior to operating eith
 \hline
 \end{tabular}
 \end{center}
-{\it The F.N.F.M. should read approximately 1.5$\times 10^{3}$ at minimum and $\approx 8\times 10^{3}$ at full NOC setting. If it deviates by more than 30\% {\bf immediately} proceed to the shutdown procedure and contact the OCE.}
+{\it The F.N.F.M. should read approximately 0.5$\times 10^{3}$ at minimum and $\approx 4\times 10^{3}$ at full NOC setting. If it deviates by more than 30\% {\bf immediately} proceed to the shutdown procedure and contact the OCE.}
 \item \CheckBox[name=dttop26]{} Increase the NOC to 10 (slowly over a period of 20 seconds).
 \item \CheckBox[name=dttop27]{} Record the final (max) value of the F.N.F. Meter,
 \begin{center}
@@ -318,10 +318,10 @@ yy/mm/dd & hh:mm & FNFM & operator & yy/mm/dd & hh:mm & FNFM & NCD counter & tim
 \item \CheckBox[name=gbsp4a]{} the gas input line is connected to the "dry" end of the umbilical
 \item \CheckBox[name=gbsp4b]{} the "blue" valve is in the open position
 \item \CheckBox[name=gbsp4c]{} the gas return line is connected to the "dry" end of the umbilical 
-\item \CheckBox[name=gbsp4d]{} the pressure transducer is powered up and that a voltmeter is connected to it.
-\item \CheckBox[name=gbsp4e]{} the voltmeter is reading the correct (18 psi) "pressure".
+%\item \CheckBox[name=gbsp4d]{} the pressure transducer is powered up and that a voltmeter is connected to it.
+%\item \CheckBox[name=gbsp4e]{} the voltmeter is reading the correct (18 psi) "pressure".
 \end{itemize}
-{\it The pressure transducer is hooked up in a temporary way for the time being. Consult the OCE for details.}
+%{\it The pressure transducer is hooked up in a temporary way for the time being. Consult the OCE for details.}
 \item \CheckBox[name=gbsp5]{} Turn on the power on the main instrument panel and the dual flow controller box.
 \item \CheckBox[name=gbsp6]{} Flip the switch on flow controller box to "B" (for N$_{2}$ and/or CO$_{2}$). The reading takes a few minutes to equilibrate to zero or near zero.
 \item \CheckBox[name=gbsp7]{} Ensure that the C)$_{2}$ bottle is hooked up to the input line at valve VA2.
@@ -340,7 +340,9 @@ CO$_{2}$ Bottle Pressure & \\
 \hline
 \end{tabular}
 \end{center}
-{\it The pressure of a full bottle is 850 to 900 psi G. The CO$_{2}$ in the bottle is in liquid or solid form and the pressure will stay relatively high until gas only and will drop rapidly thereafter. The CO$_{2}$ regulator has a small white plastic insert (disc with samll hole) in order to seal to the bottle. Don't damage or lose it.}
+{\it The pressure of a full bottle is 850 to 900 psi G. The CO$_{2}$
+in the bottle is in liquid or solid form and the pressure will stay
+relatively high until gas only and will drop rapidly thereafter.}%  The CO$_{2}$ regulator has a small white plastic insert (disc with samll hole) in order to seal to the bottle. Don't damage or lose it.}
 \item \CheckBox[name=gbsp13]{} Open the inline needle valve after the CO$_2$ regulator.
 \item \CheckBox[name=gbsp14]{} Open SVII by setting the switch on the main control panel to {\bf MAN}.
 \item \CheckBox[name=gbsp15]{} Open the manual shut-off valve VB2.
