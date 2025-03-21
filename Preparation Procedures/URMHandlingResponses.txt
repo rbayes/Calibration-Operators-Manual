@@ -1,0 +1,126 @@
+Page 2: Corrected pulley blocks in the URM description
+
+Page 3: Added description of general guidelines and cleaning practices for the URMs
+
+Page 4: There was no specific reference to cleaning the URM before transport in the transport document. Wiping the URM with UPW was a standard activity throughout surface testing.  
+
+Page 4: SS 3.1: Adding the step to clean the pulley surfaces between steps 3 and 4. Reversing the order of the umbilical installation and the feed-through installation because it makes more sense to only handle the standing end (the end that will go through the feedthrough) of the umbilical to reduce handling of the part that will go into the AV.
+
+Page 5: SS 3.2: Refining the statements on gloves to state that all operations involving the interior of the URM must require double gloves, rinced with UPW, and requiring that any handling of transferrable materials requires a change of the outer layer of the gloves.
+
+Page 6: SS 3.3: Typos corrected throughout; multiple references to lifting the URM when it is the URM cover that will be lifted. The URM itself will stay on the old cart until it is transferred to the new cart precisely because of the gas pipes, which have been extended in advance of the covergas connection; the cover is to be stored in a safe place on the floor on its support brackets specifically to prevent damage. 
+
+Page 6: SS 3.4: Pin out diagram for the 20 pin and 6 pin connectors has been added. Added diagram of the URM control system. Rewrote the electrical system check, breaking it into explicit hardware setup and software setup sections. 
+
+Page 6: SS 3.4: Remove the comment on allowing "latitude" for confusing the cables. The cables are marked. The AVR boxes are not, but that is something that can be remedied the first time the system is reassembled.
+
+Page 7: SS 3.5: Extended commentary of the history of the umbilical has been added. Details drawn from Liz Fletcher's logs of Umbilical #8 fabrication. 
+
+Page 8: Major revision: placed umbilical feedthrough procedure after umbilical installation
+
+Page 11: SS 3.8: Added comments on cleaning, storage and handling of the rope.
+- Added promised figure of a bowline with alternative instructions for the knot that will be used.
+- Also made a comment to ultrasonically clean the source weights in the DCR (which will be needed for calibrating the rope sensor) and the accompanying hook that will be used to swap the weights on the rope for the calibration.
+- Added a picture of the rope system in one of the motor boxes to illustrate the path of the rope through the URM rope system. 
+
+
+Page 12: moved the source connector installation to after the bellows and the gate valve installation as the fibre bundle for both ends of the umbilical will have to be epoxied and sanded before the source connector can go on. It is best to have this completed after the URM is assembled to the point where the umbilical can be shielded as much as possible.
+
+Conducted a test of the source connector assembly --
+
+Original plan to test the umbilical source connector:
+
+Purpose: to test the assembly of the source connector. Test the ability of the source connector to resist movement along the umbilical.
+
+Need:
+- pressure plates
+- pressure plate o-rings
+- test umbilical
+- clamp
+- table edge
+- source connector
+- 16 M3x14mm screws
+- 6 UNC 4-40 screws (double check)
+- 4 M4 terminated support bars
+
+
+In the clean room:
+- wipe down the test umbilical with UPW and lint free wipes
+- wet down the umbilical with UPW
+- string 3 pressure plates alternating with 3 orings onto umbilical
+- string the upper UFO plate onto the Umbilical
+- push the pressure plates and upper UFO plate together with the upper UFO plate 4.5" from the end of the umbilical.
+- line up the holes in the pressure plates with the UFO plate
+- tighten the pressure plate screws to finger tight
+- systematically tighten the pressure plate screws with a m4 hex wrench
+- install the side wall o-rings on the upper and lower grooves
+- fit the UFO acrylic housing into the recessed portion of the UFO top plate
+- screw the support studs into the bottom of the top plate.
+- bolt the acrylic bottom plate into the steel cylinder
+- fit the steel cylinder onto the bottom of the acrylic cylinder, making sure that the support studs are properly aligned with the acrylic bottom plate.
+- insert 8 M3 screws into the holes running through the steel cylinder base
+- ensure that the o-ring of the upper source connector is in place
+- line up the holes of the upper source connector nut
+- tighten each of the screws by hand as much as possible
+- sytematically tighten the screws with a hex wrench
+- install the source connector nut endplate. 
+- Where do the support studs terminate? That should be the last part installed
+
+
+Notes on the attempt:
+- Screws for connecting the pressure plates to the top plate of the UFO (UNC 4-40 x 15/16") are missing
+- The orings for the pressure plates (12 X 1.5 mm, TRP compound 260W) look too narrow to be compressed on the umbilical. A test with two plates did not grab on to the umbilical to prevent slippage under tension.
+- The Acrylic housing for the UFO has deformed at somepoint so that it is too wide at the lip (2.42" outer diameter at the lip) to fit into the UFO top and bottom plates (2.38" inner diameter; measured). We will need a replacement for the UFO window. This could be a stainless steel plate that seals directly between the UFO top plate  and the bottom cylinder
+- Did not continue with the assembly because of the above reasons.
+
+In the same session, we fitted the umbilical to the bulkhead fitting to be used with the teflon ferrules.
+- Attempting to move the fitting under tension did not move the umbilical at all.
+- We were able to remove the teflon ferrules after disconnecting the nuts from the bulkhead fitting, so the connection can be disassembled after assembly without destroying the umbilical
+- The ferrule left a small deformation in the umbilical after it was removed so it did compress against the umbilical when installed. 
+- We attempted the same test using a stainless steel ferrule on one side of the bulkhead fitting. This had better holding power but could not be removed from the umbilical. The teflon ferrule was preferred to avoid damaging the umbilical. However, no damage was observed with the stainless steel ferrule. 
+
+We can propose an alternative to pressure plates; a bulkhead fitting is used to seal against the umbilical and secure the source to the umbilical. A test to seal and secure the umbilical to the source connector can then be proposed that would test both the source connector under pressure and the radon tightness of the bulkhead fitting for the URM feedthrough. If we mill a new plated with a tapped through hole consistent with a 1/2" Swagelok bulkhead fitting with through holes for M3 screws so that the plate can be secured in the recessed space in the UFO bottom cylinder, we can create a volume that, when sealed to a small length of umbilical capped with a 1/2" Swagelok fitting, can be used in pressure testing in the same setup used for the AmBe encapsulation. Furthermore the same setup can be used to conduct leak testing under pressure and under vacuum to ensure that the fitting is leak tight; assuming the appropriate o-rings are used to complete the seal on the source connector.
+
+Page 13: SS 3.10.1: The interupted sentence was corrected to a paragraph describing leak checking the inter o-ring test space, identical to the testing paragraph included after the assembly of each subsequent double o-ring flange
+
+Page 13: SS 3.10.2: Specified why the o-rings must be wetted. Separated roles between two operators.
+
+Page 14: SS 3.10.2: Specified that it is the inter o-ring space that is to be tested with the vacuum leak checker.
+
+Page 14: SS 3.10.3: Designated tasks between the two workers.
+
+Page 15: SS 3.11: Divided the task between 6 workers. Altered the procedure to avoid getting hung up on the gas manifold.
+
+Page 15: SS 3.12: Added comment on history in of the bellows in SNOLAB. Removed reference to bellows installation document which has not been posted or reviewed.
+
+Page 16: SS 3.12.1: Explicitly stated that the source tee installation must be installed after the URM is moved to the lifting table. Clairified the statement about the need to install the source tee before installing the source connector.
+Made the o-ring test explicit to reference the inter o-ring space.
+
+Page 17: SS 3.13: Made sub section 3.13.2: Expand material to include description of the bellows transport to reference the support struts and why they must be removed. Corrected language in point 2. Removed the comments on the vacuum grease because the o-ring will be horizontal and not required. Made the purpose of the turnbuckles and cables explicit in step 7, the engineering of which has been reviewed to support the gate valve. Added options for removing the support struts (a hacksaw) if the bolt cutters are not enough to remove the welds
+
+Page 17: SS 3.13.1: Made sub section 3.13.3: Added delivery and cleaning history
+
+Page 18: SS 3.13.1: Made the leak checking unambiguous in checking the inter o-ring space. This is the first place where the URM is potentially closed
+
+Page 18: SS 3.14: Expanded the pot cleaning in step 1 to use Nuclean and more rinses.
+
+Page 21: SS 3.14: Added comments about using the URM drain ports and added requirement for the LAB to pass liquid particle counting test.
+
+Page 22: SS 3.15: Don't know what is meant by single point failure. At this point the gatevalve is the single exit point for gas in the URM. If we are trying to push out air it is the only way out.
+- It is not possible to overpressure the URM in this case as the entrance is small and the exit is large. In principle if we are pushing out air we don't want it to mix with the nitrogen volume in the gas bag, which is why it was closed in the initial draft.
+- These were meant in the spirit of checklists of requirements, and not strictly procedural.
+- A flow diagram has been added for reference. 
+- Emphasised that the pump-purge procedure was for the nipple assembly specifically in point 4.7 and we want the volume fully evacuated in 5 minutes, although it is probably more accurate to say that the pummp moves 5 L/minute at atmospheric pressure.
+
+Page 23: SS 3.15: What does "Stop work order" mean? Does it mean don't close the gate valves, or close the gate valve and review the situation? I chose to have the procedure reflect the latter both here and in section 3.16.
+
+Page 24: SS 3.16: Using the AmBe source does make sense once the encapsulation and run plan are reviewed, instead of deploying a blank source just to test the URM capabilities.
+- The pictures shown in Figures 3 and 4(sic) are from the engineering document reviewing the lifting procedure. It has been reviewed and approved (we had to approve it before we could assemble the mechanism). This is noted by describing the procedure as "engineer approved"
+
+Page 25: SS 3.16: I am not sure I understand this point (or is it two different points?) The clamps in question lock the rails to the top of the lifting cart. The hydraulic pump that is deflated in the previous step lowers the interior table from the bottom of the URM and should not affect the rails at all. IF this is in reference to locking the table height, we may have further work to do as that was not part of the design, or a native feature of the original table (but hydraulics should not deflate unless released). 
+
+Page 26: SS 3.16: point 19 is similar to SS 3.15 point 8
+
+Page 26: S 4: A last gasp of optimism... Sorry, it has been removed.
+
+Page 27: worker tally corrected. 
