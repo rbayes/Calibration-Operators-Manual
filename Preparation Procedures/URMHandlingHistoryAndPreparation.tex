@@ -36,7 +36,7 @@
 
 \title{URM Handling, History, and Preparation}
 \author{Ryan Bayes}
-\date{\today,\\ Version 3}
+\date{\today,\\ Version 5}
 
 \begin{document}
 \maketitle
@@ -114,12 +114,12 @@ The following procedures are described in by order of association, and not the p
 \item Electrical systems check; Sec.\ref{ss:elecSSC} (1 shift, 1 worker)
 \item Install source tee flange; Sec.\ref{ss:SourceTeeInstall} (1 shift, 2 workers)
 \item Epoxy the fibre bundles at both ends of the umbilical;
+\item Install source connector on umbilical; Sec.\ref{ss:SourceConn} (1 shift)
+\item Final Umbilical cleaning; Sec.\ref{ss:UmbClean} (1 week)
 % \item Install the wheels on the URM; 
 \item Install source bellows; Sec.\ref{sss:BellowsInstall}
 \item Install gate valve; Sec.\ref{sss:GateValveInstall}
-\item Install source connector on umbilical; Sec.\ref{ss:SourceConn} (1 shift)
 \item Purge the URM and connect to the cover gas system; Sec.\ref{ss:CGConnection}
-\item Final Umbilical cleaning; Sec.\ref{ss:UmbClean} (1 week)
 \item Connect and clean the AmBe source (?) (1 week, 3 workers)
 \item Connect URM to UI; Sec.\ref{ss:CGConnection} (1 shift, 3 workers)
 \item Field test the manipulator system.; Sec.\ref{ss:Testing} (1 shift, 3 workers)
@@ -162,7 +162,7 @@ The general glove cleanliness protocol requires that operators exercise extreme 
 The first step to the majority of the activities to commission the URM is to remove the cover. The URM has been stored with the cover on to protect it from dust contamination. 
 \begin{answerlist}
 \item Remove the screws from the electrical and umbilical feed-through plates. Carefully remove the feed-through plates from the URM cover.
-\item With an M6 hex and crescent wrench, remove the bolts holding the URM cover flange to the base. Store the nuts, bolts and washers so that they can be easily found and used. 
+\item With an M5 hex and crescent wrench, remove the bolts holding the URM cover flange to the base. Store the nuts, bolts and washers so that they can be easily found and used. 
 \item Ensure that the support feet and eye-bolts are secured to the flange at the four corners of the URM cover.
 \item Prepare an area out of the way of other activities to place the URM with a piece of plastic suitable to be wrapped over the URM cover.
 \item With four workers; one at each corner; with an appropriate height assist, lift the URM cover straight up off of the URM flange until it is clear of the URM backplane.
@@ -296,7 +296,7 @@ one to provide additional help or go for additional items if needed. The first s
 \item Open the top of the umbilical storage bag. 
 \item With one worker holding the bag, pull the umbilical from the bag
   and place it in one corner of the spill tray.
-\item Ispsect the outside of the umbilical for damage.
+\item Inspect the outside of the umbilical for damage.
 \item Pick out one end of the umbilical. Shine a light into the one
   end of the umbilical and look for the light at the other end. The
   light should be visible at the ends of the fibers on the opposite
@@ -374,24 +374,20 @@ At each stage of the URM assembly, disassembly, movement underground and reassem
 \item supply of cleanroom gloves.
 \end{itemize}
 To clean the URM the workers must
-\begin{enumerate}[label=$\square$]
+\begin{answerlist}
 \item Don clean room gloves using the procedure in section
   \ref{ss:Rgloves}.
 \item Remove the front and rear pulley blocks, The umbilical motor
   assembly, the rope encoder pulley, and the sprung rope pulley.
 \item Disassemble the front and rear pulley blocks, the rope encoder
   pulley, and the sprung rope pulley. Remove the guide and drive
-  pulleys from the umbilical motor assembly. Submit the parts for
-  ultra-sonic cleaning.
+  pulleys from the umbilical motor assembly. Be careful removing the
+  bearings from the guide pulleys in particular as there is some
+  potential for grease on the surfaces. Note that no grease was
+  observed on the outside surfaces of the bearings from the
+  disassembly of URM5, but some caution is warrented.
 \item Clean the umbilical motor assembly with UPW and clean room
   wipes.
-\item Reassemble the front and rear pulley blocks, the rope pulleys,
-  and the pulleys on the motor assembly. N.B. URM5 is physically
-  identical to URM4, so the pulleys and their support systems have
-  already been cleaned ultrasonically, so the blocks, and rope pulleys
-  can just be replaced. In contrast the umbilical motor assembly from
-  URM5 was never tested, so the pulleys on the URM4 motor assembly
-  should be replaced with the clean ones from URM5.
 \item Mist the remaining surfaces of the URM and wipe the surface with
   the cleanroom wipes until the surface is again dry. This should
   include the URM backplane, support braces, bed, piston, and
@@ -399,6 +395,13 @@ To clean the URM the workers must
   rope pulleys with UPW as it is extremely difficult to remove those
   pulleys from the system for ultrasonic cleaning without removing the
   back plane.
+\item Reassemble the front and rear pulley blocks, the rope pulleys,
+  and the pulleys on the motor assembly using the parts from
+  URM5. URM5 is physically identical to URM4, and the pulleys and
+  their support systems have already been cleaned ultrasonically, so
+  the blocks, and rope pulleys can just be replaced. Similarly the
+  pulleys on the URM4 motor assembly should be replaced with the clean
+  ones from URM5.
 \item Wipe down the traveling pulley and bottom pulleys with UPW and
   clean room wipes. Use a standard swip test on the working surfaces
   of the pulleys to ensure that there is no evidence of grease
@@ -416,7 +419,7 @@ To clean the URM the workers must
   installed.
 \item Reconnect all of the system cabling (where necessary) and
   conduct a full electrical systems check.
-\end{enumerate}
+\end{answerlist}
 
 %The ideal way to secure the umbilical is very similar to how the
 %umbilical is secured to the source; by using a set of pressure plates
@@ -542,20 +545,17 @@ manufactured length of 30~m) are available available after
 loading. The 23.09 m can be comfortably stored on the URM given that
 when the blocks are at their maximum extent the URM can hold 29.2
 m. The placement of the feed-through plate should be done so that
-there is an additional length of at least 2 m on the end of the
-umbilical to accommodate the consolidation of the fibre bundle and the
-installation of the source; more is likely better as having a length
-of 3~m (suggested) will allow the end of the umbilical to be
-comfortably manipulated for the sealing of the fibre bundle ends while
-5~m could allow the umbilical to reach the dye laser without the use
-of an additional patch cable. The position of the umbilical ends is
-dictated by the position of the feed-through plate. To consolidate the
-fibers at the end going to the laser, at least 3 m will be required so
-that the work can be done on a comfortable surface adjacent to the URM
-cart, so three meters is given as the minimum length of umbilical that
-should be outside of the URM. Any difference in distance between the
-end of the umbilical and the laser must be made up with a fiber optic
-patch cable.
+there is an additional length of at least 2 m on the running end of
+the umbilical to accommodate the consolidation of the fibre bundle and
+the installation of the source; more is likely better as having a
+length of 3~m (suggested) at the running end will allow the end of the
+umbilical to be comfortably manipulated for the sealing of the fibre
+bundle ends while the remaining 4~m at the standing end might not
+reach the dye laser without the use of an additional patch cable. The
+position of the umbilical ends is dictated by the position of the
+feed-through plate. The requested 4~m of standing end slack will be
+sufficient to allow the fibre bundle consolidation to be done on a
+comfortable surface adjacent to the URM cart.
 
 \begin{figure}
   \begin{center}
@@ -657,7 +657,7 @@ To install the umbilical in this way, a worker must
 \item Wipe down the end of the umbilical that is to be secured to the
   feed-though with cleanroom wipes and UPW. 
 \item Identify the location of the feed-through on the umbilical. This
-  should be 3 meters from the end of the umbilical to provide space to
+  should be 4 meters from the end of the umbilical to provide space to
   produce the fibre bundle on the standing end of the umbilical and
   the same on the running end of the umbilical while allowing enough
   length to reach the bottom of the AV.
@@ -988,14 +988,25 @@ that provides a platform to clamp onto the umbilical which can be
 bolted to the source connector and the rope pivot. The following
 installation procedure assumes the installation of the new plate.
 
-The procedure also assumes that the fibre bundle has been consolidated
-in an epoxy filled pipe, the procedure of which will be described
-elsewhere and should be done by specific laserball experts. The
-procedure of producing that fibre bundle involves sanding the end so
-steps must be taken to protect the URM interior during that process
-and clean the umbilical after. The procedure can in principle be
-completed without the fibre bundle in place in preparation for AmBe
-source deployment, but the end of the umbilical must be left free.
+The required parts for this procedure are
+\begin{itemize}
+\item Umbilical installed on URM with fibre bundle
+\item Source pivot (assembled)
+\item Fibre lock plate (assembled)
+\item Source Connector upper cylinder
+\item Source Connector bottom cylinder
+\item Source Connector nut
+\item Source Connector top plate
+\item source connector end groove FFKM o-rings
+\item source connector side wall FFKM o-rings
+% \item TEV o-ring for AmBe stem plate
+\item 3x A-122 Teflon o-rings
+\item 3x pressure plates
+\item 16x M3-5mm screws
+% \item 12x M3-14mm screws
+\item 6x \#4-40 3/4'' screws
+\end{itemize}
+
 
 \begin{answerlist}
 \item Wet the bottom meter of umbilical with LAB
@@ -1005,11 +1016,19 @@ source deployment, but the end of the umbilical must be left free.
 \item Thread the umbilical through the three pressure plates with a teflon o-ring following each one.
 \item Thread the umbilical through the top plate of the source connector.
 \item Ensuring that there is a surplus of umbilical below the top
-  plate of the UFO run the umbilical through the UFO acrylic, steel plate and
-  stainless steel cylinder, and the upper source connector body. If the fibre bundle has been completed there should be 3~cm of Tygothane cladding below the top plate followed by 10 to 30 cm of fibre bundle. If the fiber bundle is not complete there should be 5~cm of Versilon clad fibre bundle.
-\item Couple the end of the fibre bundle to the source connector plate if the fibre bundle is complete. Connect the wires to the further electical feedthroughs on the source connector plate. 
-\item Secure the source connector plate to the source upper source
+  plate of the UFO run the umbilical through the UFO acrylic, steel plate and stainless steel cylinder. $\sim$5cm of Tygothane cladding below the top plate followed by 10 to 30 cm of exposed fibre.
+\item Feed the spring cap followed by the fibre spring through the exposed fibres.
+\item Prepare the station for completing the fibre bundle. Have the fibre cable shroud, epoxy, and a 1 mL plastic syringe ready.
+\item Mix the epoxy as directed and draw $\sim$1 mL into the plastic syringe. Slide the fibre cable shroud onto the fibres as you inject the epoxy continually until the bundle is filled.
+\item Ensure all fibres reach the end of the fibre bundle. Leave the fibre bundle for curing. \textit{Note: this may take several days but can be expedited by setting up a heat gun to provide a warmer environment.}
+\item Once cured, set up the station for cutting the fibre bundle. This involves a dremel with a diamond dremel bit, plastic bundle rig, and vacuum. Secure the dremel with a c-clamp and install the diamond bit.
+\item Place the fibre bundle in the plastic bundle rig. The purpose of this is to distance the operator from the dremel bit and ensure a perpendicular cut. One operator guides the plastic rig along the dremel bit while the other operator deploys the vacuum.
+\item Prepare the polishing station. It is helpful to have a retort stand and clamp hold the umbilical upright with the fibre bundle directed downwards. This allows for the sandpaper to be placed underneath and the fibre bundle goes into the sanding puck while minimizing the load on the bundle.
+\item Using UPW to wet the carbide sandpaper progress from 400 to 4000 grit sandpaper in progressive increments. At 4000 grit, use the 1 micron polishing compound. After polishing a quick test with a cap lamp at one end can verify quality.
+\item The fibre bundle is now complete. Bring the spring and spring cap to the fibre bundle.
+\item Secure the fibre connector top plate to the source upper source
   connector body with 8 M3 screws.
+\item Couple the end of the fibre via two M3 screws on spring cap onto the fibre connector top plate. Connect the wires to the further electical feedthroughs on the source connector plate.
 \item Fasten the upper source connector plate to the top of the upper source connector body using 8 M3 screws. These screws must include holes for retaining wire. The retaining wire should be installed at this time.
 \item Tighten the pressure plates against the top of the source
   connector top plate.  using six \#4-40 1 inch length screws until
@@ -1020,8 +1039,14 @@ source deployment, but the end of the umbilical must be left free.
 \item Tie the central rope to the rotating collar on the pivot
   assembly underneath the rope groove using a bowline tight against
   the barrel of the pivot. This should be done using the alternative
-  method of tying the knot described above and should be tied so that the knot cannot go above the edge of the rope groove on the barrel.
+  method of tying the knot described above (see Fig.\ref{fig:altbowline}) and should be tied so that the knot cannot go above the edge of the rope groove on the barrel.
 \end{answerlist}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{AltPrepBowline}
+  \caption{The suggested alternate method of tying a bowline for the pivot assembly and the rope spool. Starting with a loop in the rope, fold a bight into the loop on the standing end. Then pass the running end through the bight to create the final loop at the end of the rope. The bight can be tightened somewhat to remove slack. The running end can be tightened against the bight so the terminal loop is the desired diameter. Once the terminal loop is set properly, the standing end can be pulled tight. This draws the running end through the inital loop to make the classic bowline shown in Fig \ref{fig:bowline}}
+  \label{fig:altbowline}
+\end{figure}
 
 \begin{figure}
   \begin{subfigure}{0.5\textwidth}
@@ -1034,7 +1059,17 @@ source deployment, but the end of the umbilical must be left free.
   \caption{The source connector}
   \label{fig:sourceConn}
 \end{subfigure}
-\caption{The original plan to terminate the umbilical includes the source pulley assembly, a umbilical flasher object and a source connector as shown}
+\begin{subfigure}{0.5\textwidth}
+  \includegraphics[width=\textwidth]{ReplacementUFOCylinder1}
+  \caption{The replacement source connector top plate}
+  \label{fig:newTopPlate}
+\end{subfigure}
+\begin{subfigure}{0.45\textwidth}
+  \includegraphics[width=\textwidth]{AssembledSourceConnector}
+  \caption{Source Connector pieces assembled with the fibre cable lock plates}
+  \label{fig:assembledConnector}
+\end{subfigure}
+\caption{The original plan to terminate the umbilical includes the source pulley assembly, a umbilical flasher object and a source connector as shown. The replacement top plate mechanically replaces the UFO top plate, acrylic housing and steel cylinder.}
 \end{figure}
 
 
@@ -1073,7 +1108,7 @@ the bellows) the following procedure can be followed.
 \end{answerlist}
   
 
-\subsubsection{Bellows installation}\label{sss:BellowsInstall}
+\subsection{Bellows installation}\label{sss:BellowsInstall}
 Installation of the bellows should be paused to allow for the
 installation of the source connector. This will allow for better
 control of the umbilical and the rope during the bellows installation
@@ -1305,6 +1340,17 @@ An important activity prior to deploying the source is to deploy a test mass in 
   \label{fig:URMDeploy}
 \end{figure}
 
+
+\begin{figure}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{URMLiftingTableSafetyBars}
+  \end{center}
+  \caption{Location of the URM safety stop bars on the URM lifting cart}
+  \label{fig:URMSafeStop}
+\end{figure}
+
+
+
 To deploy the source the operators must follow the engineer approved lifting and hanging procedure as follows;
 \begin{answerlist}
 \item Align the URM with the South side URM lifting path.
@@ -1320,7 +1366,7 @@ To deploy the source the operators must follow the engineer approved lifting and
 \item Raise the URM gatevalve so that it is no longer resting on the cart table through the use of the bellows turnbuckles. 
 \item Connect the rails to the lifting mechanism straps using the available eye-bolts on the front and back of the URM.
 \item With one person on the winch and a second on the cart, lift the URM to operating height. Most of the effort is from the lifting cart; there should never be slack on the winch straps but never so much that it takes all of the URM weight.
-\item With the URM at operating height, install the turnbuckles installed on the hangers to fix the URM rails into position. Set the safety stop bars in place at the base of the table.
+\item With the URM at operating height, install the turnbuckles installed on the hangers to fix the URM rails into position. Set the safety stop bars in place at the base of the table as shown in Fig. \ref{fig:URMSafeStop}.
 \item Undo the turnbuckles chaining the URM to the cart. Unlock the inner table and lower it until it is flush with the surface of the outer table.
 \item Remove the cover from the 10 inch gatevalve nipple assembly and check that the requisite o-rings are in place.
 \item Push the URM into position over the UI.
@@ -1365,8 +1411,8 @@ The tasks to be completed prior to source deployment can be placed onto a matrix
     \item Electrical systems check; Sec.\ref{ss:elecSSC}
     \item Transfer URM from cart to lifting table; Sec.\ref{ss:transfer}
     \item Install source tee flange; Sec.\ref{ss:SourceTeeInstall}
-    \item Final Umbilical cleaning; Sec.\ref{ss:UmbClean}
     \item Install source connector on umbilical; Sec.\ref{ss:SourceConn}
+    \item Final Umbilical cleaning; Sec.\ref{ss:UmbClean}
       % \item Install the wheels on the URM
     \item Install source bellows; Sec.\ref{sss:BellowsInstall}
     \item Install gate valve; Sec.\ref{sss:GateValveInstall}
